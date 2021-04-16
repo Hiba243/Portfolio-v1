@@ -1,0 +1,49 @@
+.header{
+    height: 85vh; /*landing page should be 95% of viewport height*/
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light,0.8), 
+        rgba($color-primary-dark,0.8)),
+        url(../img/hero-small.jpg); 
+    background-size: cover; /*it always fit the background to the width of the viewport*/
+    background-position: top; /*so that image is always at the top of viewport, it will crop some part of bottom*/
+    clip-path:polygon(0 0 , 100% 0, 100% 75vh, 0 100% ); /*specify coordinates of resultant polygon in. specify coordinates in clockwise direction*/
+    position: relative;
+    @supports(clip-path: polygon(0 0)) or (-webkit-clip-path:polygon(0 0 )){
+        clip-path:polygon(0 0 , 100% 0, 100% 75vh, 0 100% ); /*specify coordinates of resultant polygon in. specify coordinates in clockwise direction*/
+        height: 95vh;
+    }
+    @media(min-resolution:192dpi) and (min-width: 37.5em), 
+            (-webkit-min-device-pixel:2) and (min-width: 37.5em),
+            (min-width: 125em){
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light,0.8), 
+        rgba($color-primary-dark,0.8)),
+        url(../img/hero.jpg); 
+    }
+
+    @include respond(phone){
+        clip-path:polygon(0 0 , 100% 0, 100% 85vh, 0 100% );
+    }
+    &__logo-box{
+        position: absolute;
+        top:4rem;
+        left: 4rem;
+    }
+    
+    &__logo{
+        height: 3.5rem;
+    }
+    &__text-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); /*will move half of the width of the box, will move it to left side, similary move up half of height*/
+        text-align: center; /*helps align the button, which is a block element, in the center */
+    }
+}
+
+/* .logo:hover{
+    animation: moveInRight 1s ease-out; we can use animation not just on page load, but on hover also
+} */
