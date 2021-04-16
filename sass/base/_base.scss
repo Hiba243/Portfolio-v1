@@ -8,9 +8,7 @@
 }
 
 html{
-    font-size: 62.5%; /*1 rem=10px, 62.5%of root font size 16px=10px*/
-   
-    
+    font-size: 62.5%; /*1 rem=10px, 62.5%of root font size 16px=10px*/   
     @include respond(tab-land){
         font-size: 56.25%; //1rem  to be  9px , 9/16=56.25%
     }
@@ -19,17 +17,17 @@ html{
     }
     @include respond(big-desktop){
         font-size: 75%; //1rem  to be  12px , 12/16=75%
-    }
-   
+    }  
 }
 
 body{
     box-sizing: border-box;
     background-color: $color-primary;
-    color:$color-white;
+    color:$color-secondary;
+    padding: 1rem 8rem 2rem 8rem;
 }
 
 ::selection{
-    background-color: $color-primary;
-    color:$color-white;
+    background-color: $color-secondary;
+    color:$color-primary;
 }
