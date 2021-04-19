@@ -43,23 +43,27 @@
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 5rem;
+        top: 0;
+        padding: 4rem 0;
         flex-direction: column;
-        background-color:$color-primary;
+        background-color:$color-secondary;
         width: 100%;
-        border-radius: 10px;
         text-align: center;
         transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
+        color:$color-primary;
     }
 
     .nav-menu.active {
         left: 0;
+        top:0;
+        padding: 4rem 0;
     }
 
     .nav-item {
         margin: 2.5rem 0;
+    }
+    .nav-link{
+        color:$color-primary;
     }
 
     .hamburger {
@@ -69,15 +73,18 @@
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
+        background-color: $color-primary;
     }
 
     .hamburger.active .bar:nth-child(1) {
         -webkit-transform: translateY(8px) rotate(45deg);
         transform: translateY(8px) rotate(45deg);
+        background-color: $color-primary;
     }
 
     .hamburger.active .bar:nth-child(3) {
         -webkit-transform: translateY(-8px) rotate(-45deg);
         transform: translateY(-8px) rotate(-45deg);
+        background-color: $color-primary;
     }
 }
