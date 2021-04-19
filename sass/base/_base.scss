@@ -25,9 +25,20 @@ body{
     background-color: $color-primary;
     color:$color-secondary;
     padding: 1rem 8rem 2rem 8rem;
+    @include respond(tab-port){
+        padding:4rem;
+    }
+    @include respond(phone){
+        padding:2rem;
+    }
 }
 
 ::selection{
     background-color: $color-secondary;
     color:$color-primary;
+}
+
+a{
+    color:$color-secondary;
+    text-decoration: none;
 }

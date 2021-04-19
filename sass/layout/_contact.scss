@@ -1,0 +1,24 @@
+.section-contact{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &__text{
+        
+        &-t1{
+            font-size: 4rem;
+            margin: 8rem 0 2rem 0;
+            @include respond(tab-port){
+                margin-top: 4rem;
+            }
+        }
+        &-t2{
+            font-size: 1.75rem;
+            margin: 4rem 0 2rem 0;
+            @include respond(tab-port){
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
