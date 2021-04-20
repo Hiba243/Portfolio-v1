@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="css/style.css">
-        
+
         <title>Hiba Fatima</title>
     </head>
     <body>
@@ -16,13 +16,13 @@
                 <a href="#" class="nav-logo">Hiba Fatima</a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Work</a>
+                        <a href="#work" class="nav-link">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -34,14 +34,30 @@
         </header>
         <main>
             <section class="section-landing-page">
-                <h1 class="section-landing-page__text-h1">Hi, I'm Hiba, a Web Developer!</h1>
+                <h1 class="section-landing-page__text-h1">Hi, I'm Hiba, a <span class="pop-effect">Web Developer</span> 
+                    <!-- <p class="popout">
+                    <span>W</span>
+                    <span>e</span>
+                    <span>b</span>
+                    <span>D</span>
+                    <span>e</span>
+                    <span>v</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>o</span>
+                    <span>p</span>
+                    <span>e</span>
+                    <span>r</span>
+                    
+                </p> -->
+                </h1>
                 <h1 class="section-landing-page__text-h2">I build websites and web apps. </h1>
                 <p class="section-landing-page__text-t2">Currently, I'm a web developer at Deloitte USI. In my spare time, I'm working on side projects to learn more and delve deeper into the world of full-stack web development.</p>
                 <button class="btn btn-1">Get In Touch</button>
             </section>
-            <section class="section-work">
-                <h1 class="section-work__text-h1">Selected Work</h1>
-                <section class="project project-p1">
+            <section class="section-work" id="work">
+                <h1 class="section-work__text-h1 hide-me">Selected Work</h1>
+                <section class="project project-p1 hide-me">
                     <div class="project__img">img</div>
                     <div class="project__desc">
                         <h2 class="project__desc__text-h1">Project Name</h2>
@@ -53,11 +69,11 @@
                         </div>
                     </div>
                 </section>
-                <section class="project project-p2">
+                <section class="project project-p2 hide-me">
                     <div class="project__img">
-                        
+
                     </div>
-                    <div class="project__desc">
+                    <div class="project__desc project__desc-p2">
                         <h2 class="project__desc__text-h1">Project Name</h2>
                         <h3 class="project__desc__text-h2">#React.js #Node.js</h3>
                         <p class="project__desc__text-t1">Deleniti dolorum fugit expedita maiores ipsam.</p>
@@ -67,14 +83,15 @@
                         </div>
                     </div>
                 </section>
+                <!--add more projects here, and also add margin bottom to p2-->
             </section>
-            <section class="section-about">
-                <h1 class="section-about__text-t1">About Me</h1>
-                <p class="section-about__text-t2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus. Nec ultrices dui sapien eget mi proin sed libero enim. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. </p>
+            <section class="section-about" id="about">
+                <h1 class="section-about__text-t1 hide-me">About Me</h1>
+                <p class="section-about__text-t2 hide-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus. Nec ultrices dui sapien eget mi proin sed libero enim. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. </p>
             </section>
-            <section class="section-contact">
-                <h1 class="section-contact__text-t1">Get In Touch</h1>
-                <p class="section-contact__text-t2">Have a project in mind? Want to collaborate? Drop me a mail at: <a href="#">xyz@gmail.com</a></p>
+            <section class="section-contact " id="contact">
+                <h1 class="section-contact__text-t1 hide-me">Get In Touch</h1>
+                <p class="section-contact__text-t2 hide-me">Have a project in mind? Want to collaborate? Drop me a mail at: <a href="#">xyz@gmail.com</a></p>
             </section>
         </main>
         <footer class="footer">
@@ -89,4 +106,75 @@
         </footer>
     </body>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                // $(this).toggle({ effect: "scale", direction: "vertical" });
+                $(this).animate({'opacity':'1'},100);
+
+            }
+
+        });
+
+    });
+
+});
+
+$(document).ready(function() {
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+
+        /* Check the location of each desired element */
+        $('.hide-me').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},1500);
+
+            }
+
+        });
+
+    });
+});
+</script>
 </html>

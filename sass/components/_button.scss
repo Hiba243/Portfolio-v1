@@ -14,7 +14,12 @@ button:hover{
 
 .btn{
     &-1{
-        margin-bottom: 4rem;
+        animation-name: moveInUp;
+        animation-duration:1s; 
+        animation-timing-function: ease-out;
+        backface-visibility: hidden;
+        animation-delay: 2s;  
+        animation-fill-mode: backwards;
         @include respond(phone){
             margin-bottom: 0;
         }

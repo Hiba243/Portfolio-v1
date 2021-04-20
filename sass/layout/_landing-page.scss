@@ -1,18 +1,22 @@
 .section-landing-page{
 
-    height: fit-content;
+    height: 90vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    margin-bottom: 2rem;
     &__text{
         
         &-h1{
             font-size: 4rem;
-            margin: 7rem 0 .5rem 0;
+            animation-name: moveInUp;
+        animation-duration:1s; 
+        animation-timing-function: ease-out;
+        /*
+        animation-delay: 3s;  wait 3s, then start animation
+        */
             @include respond(phone){
                 font-size: 3rem;
-                margin-top: 2.75rem;
             }
         }
         &-h2{
@@ -21,6 +25,13 @@
             @include respond(phone){
                 font-size: 3rem;
             }
+            animation-name: moveInUp;
+        animation-duration:1s; 
+        animation-timing-function: ease-out;
+        backface-visibility: hidden;
+        animation-delay: .8s;  
+        animation-fill-mode: backwards;
+        
         }
         &-t2{
             font-size: 1.75rem;
@@ -29,6 +40,12 @@
             @include respond(phone){
                 max-width: fit-content;
             }
+            animation-name: moveInUp;
+        animation-duration:1s; 
+        animation-timing-function: ease-out;
+        backface-visibility: hidden;
+        animation-delay: 1.5s;  
+        animation-fill-mode: backwards;
         }
         &-t3{
             font-size: 1.75rem;
