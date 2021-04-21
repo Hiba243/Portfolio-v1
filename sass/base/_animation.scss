@@ -9,13 +9,10 @@
         transform: translate(0); /*so that it looks exactly how it is without animation*/
     }
 }
-@keyframes moveInRight{
+@keyframes moveInDown{
     0%{
         opacity: 0;
-        transform: translateX(10rem);
-    }
-    80%{
-        transform: translateX(-1rem);
+        transform: translateY(-10rem);
     }
     100%{
         opacity: 1;
@@ -23,10 +20,50 @@
     }
 }
 
-@keyframes moveInBottom{
+@keyframes moveInRight{
     0%{
         opacity: 0;
-        transform: translateY(3rem);
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0); /*so that it looks exactly how it is without animation*/
+    }
+}
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0); /*so that it looks exactly how it is without animation*/
+    }
+}
+@keyframes moveInLeftZoom{
+    0%{
+        opacity: 0;
+        transform: translateX(20rem) translateY(20rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0); /*so that it looks exactly how it is without animation*/
+    }
+}
+@keyframes moveInRightZoom{
+    0%{
+        opacity: 0;
+        transform: translateX(-20rem) translateY(20rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0); /*so that it looks exactly how it is without animation*/
+    }
+}
+@keyframes moveInLeftSmall{
+    0%{
+        opacity: 0;
+        transform: translateX(-5rem);
     }
     100%{
         opacity: 1;

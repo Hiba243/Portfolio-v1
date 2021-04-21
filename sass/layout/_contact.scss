@@ -13,11 +13,12 @@
             }
         }
         &-t2{
-            font-size: 1.75rem;
+            font-size: 2rem;
             margin: 4rem 0 2rem 0;
             @include respond(tab-port){
                 margin-top: 0;
                 margin-bottom: 0;
+                font-size: 1.75rem;
             }
         }
     }

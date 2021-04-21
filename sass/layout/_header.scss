@@ -28,6 +28,30 @@
 
 .nav-item {
     margin-left: 5rem;
+    &-1{
+        animation-name: moveInDown;
+    animation-duration:1s; 
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .2s;  
+    animation-fill-mode: backwards;
+    }
+    &-2{
+        animation-name: moveInDown;
+    animation-duration:1s; 
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .3s;  
+    animation-fill-mode: backwards;
+    }
+    &-3{
+        animation-name: moveInDown;
+    animation-duration:1s; 
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .4s;  
+    animation-fill-mode: backwards;
+    }
 }
 
 .nav-link{
@@ -37,6 +61,12 @@
 
 .nav-logo {
     font-size: 1.5rem;
+    animation-name: moveInDown;
+    animation-duration:1s; 
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .2s;  
+    animation-fill-mode: backwards;
 }
 
 @media only screen and (max-width: 768px) {

@@ -22,8 +22,8 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #252525;
-  color: #CACACE;
+  background-color: #FFEEF2;
+  color: #3F3D56;
   padding: 1rem 8rem 2rem 8rem; }
   @media only screen and (max-width: 56.25em) {
     body {
@@ -33,14 +33,14 @@ body {
       padding: 2rem; } }
 
 ::selection {
-  background-color: #CACACE;
-  color: #252525; }
+  background-color: #3F3D56;
+  color: #FFEEF2; }
 
 a {
-  color: #CACACE;
+  color: #3F3D56;
   text-decoration: none; }
 
-.hide-me {
+.hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1 {
   opacity: 0; }
 
 @keyframes moveInUp {
@@ -52,21 +52,55 @@ a {
     transform: translate(0);
     /*so that it looks exactly how it is without animation*/ } }
 
-@keyframes moveInRight {
+@keyframes moveInDown {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
+    transform: translateY(-10rem); }
   100% {
     opacity: 1;
     transform: translate(0);
     /*so that it looks exactly how it is without animation*/ } }
 
-@keyframes moveInBottom {
+@keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateY(3rem); }
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /*so that it looks exactly how it is without animation*/ } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /*so that it looks exactly how it is without animation*/ } }
+
+@keyframes moveInLeftZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem) translateY(20rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /*so that it looks exactly how it is without animation*/ } }
+
+@keyframes moveInRightZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem) translateY(20rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /*so that it looks exactly how it is without animation*/ } }
+
+@keyframes moveInLeftSmall {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem); }
   100% {
     opacity: 1;
     transform: translate(0);
@@ -77,39 +111,11 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #CACACE; }
+  color: #3F3D56; }
 
 @media only screen and (max-width: 37.5em) {
   h1 {
     font-size: 3rem !important; } }
-
-.pop-effect {
-  text-shadow: 0.0075em 0.0075em 0 #af1b3f, 0.005em 0.005em 0 #af1b3f, 0.01em 0.01em 0 #af1b3f, 0.015em 0.015em #af1b3f, 0.02em 0.02em 0 #af1b3f, 0.025em 0.025em 0 #af1b3f, 0.03em 0.03em 0 #af1b3f, 0.035em 0.035em 0 #af1b3f; }
-
-.popout {
-  display: inline !important; }
-
-@keyframes ani {
-  0% {
-    transform: translate3d(0, 0, 0);
-    text-shadow: 0em 0em 0 #AF1B3F;
-    color: #CACACE; }
-  30% {
-    transform: translate3d(0, 0, 0);
-    text-shadow: 0em 0em 0 #AF1B3F;
-    color: #CACACE; }
-  70% {
-    transform: translate3d(0.08em, -0.08em, 0);
-    text-shadow: -0.08em 0.08em #AF1B3F;
-    color: #CACACE; }
-  100% {
-    transform: translate3d(0.08em, -0.08em, 0);
-    text-shadow: -0.08em 0.08em #AF1B3F;
-    color: #CACACE; } }
-  .popout span {
-    position: relative;
-    display: inline-block;
-    animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1); }
 
 .u-center-text {
   text-align: center !important; }
@@ -142,21 +148,21 @@ button {
   border: none;
   padding: 1.2rem 1.5rem;
   font: inherit;
-  font-size: 1.5rem;
-  background-color: #252525;
-  color: #CACACE;
-  border: 1px solid #CACACE; }
+  font-size: 2rem;
+  background-color: #FFEEF2;
+  color: #3F3D56;
+  border: 1px solid #3F3D56; }
 
 button:hover {
-  background-color: rgba(202, 202, 206, 0.2);
-  color: #CACACE; }
+  background-color: rgba(63, 61, 86, 0.2);
+  color: #3F3D56; }
 
 .btn-1 {
   animation-name: moveInUp;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   backface-visibility: hidden;
-  animation-delay: 2s;
+  animation-delay: .8s;
   animation-fill-mode: backwards; }
   @media only screen and (max-width: 37.5em) {
     .btn-1 {
@@ -178,7 +184,7 @@ button:hover {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #CACACE; }
+  background-color: #3F3D56; }
 
 .nav-menu {
   display: flex;
@@ -188,12 +194,39 @@ button:hover {
 
 .nav-item {
   margin-left: 5rem; }
+  .nav-item-1 {
+    animation-name: moveInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .2s;
+    animation-fill-mode: backwards; }
+  .nav-item-2 {
+    animation-name: moveInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .3s;
+    animation-fill-mode: backwards; }
+  .nav-item-3 {
+    animation-name: moveInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    animation-delay: .4s;
+    animation-fill-mode: backwards; }
 
 .nav-link {
   font-size: 1.5rem; }
 
 .nav-logo {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  animation-name: moveInDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+  animation-delay: .2s;
+  animation-fill-mode: backwards; }
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
@@ -202,11 +235,11 @@ button:hover {
     top: 0;
     padding: 4rem 0;
     flex-direction: column;
-    background-color: #CACACE;
+    background-color: #3F3D56;
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    color: #252525; }
+    color: #FFEEF2; }
   .nav-menu.active {
     left: 0;
     top: 0;
@@ -214,21 +247,21 @@ button:hover {
   .nav-item {
     margin: 2.5rem 0; }
   .nav-link {
-    color: #252525; }
+    color: #FFEEF2; }
   .hamburger {
     display: block;
     cursor: pointer; }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
-    background-color: #252525; }
+    background-color: #FFEEF2; }
   .hamburger.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
-    background-color: #252525; }
+    background-color: #FFEEF2; }
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
-    background-color: #252525; } }
+    background-color: #FFEEF2; } }
 
 .footer {
   height: fit-content;
@@ -236,7 +269,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  margin: 10rem 0 8rem 0; }
+  margin: 10rem 0 6rem 0; }
   @media only screen and (max-width: 56.25em) {
     .footer {
       margin-bottom: 4rem;
@@ -247,16 +280,23 @@ button:hover {
     align-items: flex-end; }
 
 .section-landing-page {
+  position: relative;
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
+  @media only screen and (max-width: 56.25em) {
+    .section-landing-page {
+      align-items: center; } }
   .section-landing-page__text-h1 {
     font-size: 4rem;
-    animation-name: moveInUp;
+    animation-name: moveInDown;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    animation-delay: .5s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards;
     /*
         animation-delay: 3s;  wait 3s, then start animation
         */ }
@@ -266,30 +306,56 @@ button:hover {
   .section-landing-page__text-h2 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    animation-name: moveInUp;
+    animation-name: moveInDown;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     backface-visibility: hidden;
-    animation-delay: .8s;
+    animation-delay: .6s;
     animation-fill-mode: backwards; }
     @media only screen and (max-width: 37.5em) {
       .section-landing-page__text-h2 {
         font-size: 3rem; } }
   .section-landing-page__text-t2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     max-width: 52vw;
     margin-bottom: 3rem;
     animation-name: moveInUp;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     backface-visibility: hidden;
-    animation-delay: 1.5s;
+    animation-delay: .7s;
     animation-fill-mode: backwards; }
     @media only screen and (max-width: 37.5em) {
       .section-landing-page__text-t2 {
         max-width: fit-content; } }
-  .section-landing-page__text-t3 {
-    font-size: 1.75rem; }
+
+.laptop {
+  position: absolute;
+  left: 65%;
+  top: 20%; }
+
+.girl {
+  display: block;
+  top: 20%;
+  left: 60%;
+  position: absolute;
+  width: 40%;
+  z-index: 100;
+  animation-name: moveInLeftSmall;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+  animation-delay: 1.4s;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+  margin-left: 2rem; }
+  @media only screen and (min-width: 900px) and (max-width: 1000px) {
+    .girl {
+      margin-left: 5rem;
+      top: 30%; } }
+  @media only screen and (max-width: 56.25em) {
+    .girl {
+      display: none; } }
 
 .section-work__text-h1 {
   font-size: 4rem;
@@ -304,7 +370,7 @@ button:hover {
     .project {
       flex-direction: column; } }
   .project__img {
-    background-color: #CACACE;
+    background-color: #3F3D56;
     height: 60vh;
     width: 581px; }
     @media only screen and (max-width: 56.25em) {
@@ -316,7 +382,7 @@ button:hover {
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #CACACE;
+    border-bottom: 1px solid #3F3D56;
     height: 60vh;
     width: 45%; }
     @media only screen and (max-width: 56.25em) {
@@ -330,19 +396,34 @@ button:hover {
       .project__desc-p2 {
         padding-bottom: 0; } }
     .project__desc__text-h1 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       margin-bottom: 1.5rem; }
     .project__desc__text-h2 {
       font-size: 1.5rem;
       font-weight: 500;
       margin-bottom: .75rem; }
+      @media only screen and (max-width: 56.25em) {
+        .project__desc__text-h2 {
+          font-size: 1.75rem; } }
     .project__desc__text-t1 {
       font-size: 1.5rem;
       margin-bottom: 1rem; }
+      @media only screen and (max-width: 56.25em) {
+        .project__desc__text-t1 {
+          font-size: 1.75rem; } }
   .project__link {
-    font-size: 1.5rem; }
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
     .project__link-l1 {
-      margin-right: 1rem; }
+      color: inherit; }
+    .project__link-l2 img {
+      height: 4rem;
+      color: inherit; }
+    @media only screen and (max-width: 56.25em) {
+      .project__link {
+        font-size: 1.75rem; } }
   .project-p1 {
     margin-bottom: 10rem; }
     @media only screen and (max-width: 56.25em) {
@@ -379,12 +460,13 @@ button:hover {
       .section-about__text-t1 {
         margin-top: 4rem; } }
   .section-about__text-t2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin: 4rem 0 2rem 0; }
     @media only screen and (max-width: 56.25em) {
       .section-about__text-t2 {
         margin-top: 0;
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        font-size: 1.75rem; } }
 
 .section-contact {
   height: fit-content;
@@ -398,9 +480,10 @@ button:hover {
       .section-contact__text-t1 {
         margin-top: 4rem; } }
   .section-contact__text-t2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin: 4rem 0 2rem 0; }
     @media only screen and (max-width: 56.25em) {
       .section-contact__text-t2 {
         margin-top: 0;
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        font-size: 1.75rem; } }

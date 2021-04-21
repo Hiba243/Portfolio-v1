@@ -2,7 +2,7 @@ button{
     border: none;
     padding: 1.2rem 1.5rem;
     font:inherit;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: $color-primary;
     color:$color-secondary;
     border: 1px solid $color-secondary;
@@ -18,7 +18,7 @@ button:hover{
         animation-duration:1s; 
         animation-timing-function: ease-out;
         backface-visibility: hidden;
-        animation-delay: 2s;  
+        animation-delay: .8s;  
         animation-fill-mode: backwards;
         @include respond(phone){
             margin-bottom: 0;

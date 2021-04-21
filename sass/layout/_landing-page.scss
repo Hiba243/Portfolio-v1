@@ -1,17 +1,22 @@
 .section-landing-page{
-
+    position: relative;
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include respond(tab-port){
+        align-items: center;
+    }
     &__text{
-        
         &-h1{
-            font-size: 4rem;
-            animation-name: moveInUp;
+        font-size: 4rem;
+        animation-name: moveInDown;
         animation-duration:1s; 
         animation-timing-function: ease-out;
+        animation-delay: .5s;
+        backface-visibility: hidden;
+        animation-fill-mode: backwards;
         /*
         animation-delay: 3s;  wait 3s, then start animation
         */
@@ -25,16 +30,16 @@
             @include respond(phone){
                 font-size: 3rem;
             }
-            animation-name: moveInUp;
+            animation-name: moveInDown;
         animation-duration:1s; 
         animation-timing-function: ease-out;
         backface-visibility: hidden;
-        animation-delay: .8s;  
+        animation-delay: .6s;  
         animation-fill-mode: backwards;
         
         }
         &-t2{
-            font-size: 1.75rem;
+            font-size: 2rem;
             max-width: 52vw;
             margin-bottom: 3rem;
             @include respond(phone){
@@ -44,11 +49,37 @@
         animation-duration:1s; 
         animation-timing-function: ease-out;
         backface-visibility: hidden;
-        animation-delay: 1.5s;  
+        animation-delay: .7s;  
         animation-fill-mode: backwards;
         }
-        &-t3{
-            font-size: 1.75rem;
-        }
+
     }
+}
+.laptop{
+    position: absolute;
+    left:65%;
+    top:20%;
+}
+.girl{
+    display: block;
+    top:20%;
+    left:60%;
+    position: absolute;
+    width: 40%;
+    z-index: 100;
+    animation-name: moveInLeftSmall;
+        animation-duration:1s; 
+        animation-timing-function: ease-out;
+        backface-visibility: hidden;
+        animation-delay: 1.4s;  
+        animation-fill-mode: backwards;
+        overflow: hidden;
+        margin-left:2rem;
+        @media only screen and (min-width:900px) and (max-width:1000px){
+            margin-left: 5rem;
+            top:30%
+        }
+        @include respond(tab-port){
+            display: none;
+        }
 }
