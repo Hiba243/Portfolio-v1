@@ -15,7 +15,6 @@
 }
 .project{
     display: flex;
-    
     @include respond(tab-port){
         flex-direction: column;
     }
@@ -25,7 +24,6 @@
         width: 581px;
         @include respond(tab-port){
             width: 100%;
-           
         }
     }
     &__desc{
@@ -35,7 +33,6 @@
         justify-content: flex-end;
         padding-bottom: 3rem;
         border-bottom: 1px solid $color-secondary;
-        // background-color: lightblue;
         height: 60vh;
         width: 45%;
         @include respond(tab-port){
@@ -55,13 +52,6 @@
                 font-size: 2rem;
                 font-family:Lora;
                 margin-bottom: 1.5rem;
-            }
-            &-h2{
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-                @include respond(tab-port){
-                    font-size: 1.75rem;
-                }
             }
             &-t1{
                 font-size: 1.5rem;
@@ -83,8 +73,6 @@
         @include respond(tab-port){
             font-size: 1.75rem;
         }
-        
-
     }
     &-p1{
         margin-bottom: 10rem;
@@ -106,7 +94,7 @@
         margin-left: 0;
         
         @include respond(tab-port){
-            order:2;
+        order:2;
         justify-content: center;
         align-items: flex-start;
         border-bottom: none;

@@ -36,12 +36,12 @@
         <main>
             <section class="section-landing-page">
                 <div class="heading-main-1">
-                    <h1 class="heading-main__text-p1 heading-main__text-1">Hiba</h1>
-                    <h1 class="heading-main__text-p1 heading-main__text-2">Fatima</h1>
+                    <h1 class="heading-main__text-1 heading-main__text-1">Hiba</h1>
+                    <h1 class="heading-main__text-1 heading-main__text-2">Fatima</h1>
                 </div>
                 <div class="heading-main-2">
-                    <h1 class="heading-main__text-p2 heading-main__text-3">Web</h1>
-                    <h1 class="heading-main__text-p1 heading-main__text-4">Developer</h1>
+                    <h1 class="heading-main__text-2 heading-main__text-3">Web</h1>
+                    <h1 class="heading-main__text-2 heading-main__text-4">Developer</h1>
                 </div>
             </section>
             
@@ -109,23 +109,15 @@
     </body>
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-
     $(document).ready(function(){
-    // Add smooth scrolling to all links
     $("a").on('click', function(event) {
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-        // Prevent default anchor click behavior
         event.preventDefault();
         var hash = this.hash;
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
             scrollTop: $(hash).offset().top
         }, 800, function(){
-            // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
         });
         } 
@@ -134,21 +126,6 @@
 
     $(document).ready(function() {
         $(window).scroll( function(){
-            $('.hide-me').each( function(i){
-                var bottom_of_object = $(this).position().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-                if( bottom_of_window > bottom_of_object ){
-                    $(this).css({"animation":"moveInDown 1.5s","opacity":"1"});              
-                }
-            });
-            $('.hide-left-side').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInLeft 1.5s","opacity":"1"});
-                $(this).toggleClass('project__desc-line');
-            }
-            });
             $('.hide-me-1').each( function(i){
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -168,6 +145,21 @@
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             if( bottom_of_window > bottom_of_object ){
                 $(this).css({"animation":"moveInDown 1.5s .6s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
+            }
+            });
+            $('.hide-me').each( function(i){
+                var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if( bottom_of_window > bottom_of_object ){
+                    $(this).css({"animation":"moveInDown 1.5s","opacity":"1"});              
+                }
+            });
+            $('.hide-left-side').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInLeft 1.5s","opacity":"1"});
+                $(this).toggleClass('project__desc-line');
             }
             });
             $('.hide-left-side-1').each( function(i){

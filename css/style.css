@@ -40,7 +40,7 @@ a {
   color: #EFEBE8;
   text-decoration: none; }
 
-.hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1, .hide-me-selected, .hide-me-work {
+.hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1 {
   opacity: 0; }
 
 .hide-me-1, .hide-me-2, .hide-me-3 {
@@ -100,27 +100,12 @@ a {
     transform: translate(0);
     /*so that it looks exactly how it is without animation*/ } }
 
-@keyframes moveInLeftSmall {
-  0% {
-    opacity: 0;
-    transform: translateX(-5rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-    /*so that it looks exactly how it is without animation*/ } }
-
 body {
   font-family: "Roboto", sans-serif;
   /* font-size: 16px; */
   font-weight: 300;
   line-height: 1.7;
   color: #EFEBE8; }
-
-h2 {
-  font-weight: 400; }
-
-h3 {
-  font-weight: 300; }
 
 h1 {
   font-weight: 100;
@@ -129,56 +114,11 @@ h1 {
     h1 {
       font-size: 3rem !important; } }
 
-.u-center-text {
-  text-align: center !important; }
+h2 {
+  font-weight: 400; }
 
-.u-margin-bottom-big {
-  margin-bottom: 8rem !important; }
-  @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-big {
-      margin-bottom: 5rem !important; } }
-
-.u-margin-bottom-huge {
-  margin-bottom: 15rem !important; }
-
-.u-margin-bottom-med {
-  margin-bottom: 4rem !important; }
-  @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-med {
-      margin-bottom: 3rem !important; } }
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem !important; }
-
-.u-margin-bottom-2 {
-  margin-bottom: 2rem !important; }
-
-.u-margin-top {
-  margin-top: 2rem !important; }
-
-button {
-  border: none;
-  padding: 1.2rem 1.5rem;
-  font: inherit;
-  font-size: 2rem;
-  background-color: #252525;
-  color: #EFEBE8;
-  border: 1px solid #EFEBE8; }
-
-button:hover {
-  background-color: rgba(239, 235, 232, 0.2);
-  color: #EFEBE8; }
-
-.btn-1 {
-  animation-name: moveInUp;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  backface-visibility: hidden;
-  animation-delay: .8s;
-  animation-fill-mode: backwards; }
-  @media only screen and (max-width: 37.5em) {
-    .btn-1 {
-      margin-bottom: 0; } }
+h3 {
+  font-weight: 300; }
 
 .flower {
   z-index: 5000; }
@@ -208,6 +148,8 @@ button:hover {
     z-index: 1;
     background: pink;
     border-radius: 50%; }
+  .flower-2 {
+    align-self: flex-end; }
 
 @keyframes rotating {
   from {
@@ -466,12 +408,6 @@ button:hover {
       font-size: 2rem;
       font-family: Lora;
       margin-bottom: 1.5rem; }
-    .project__desc__text-h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem; }
-      @media only screen and (max-width: 56.25em) {
-        .project__desc__text-h2 {
-          font-size: 1.75rem; } }
     .project__desc__text-t1 {
       font-size: 1.5rem;
       margin-bottom: 1rem; }
