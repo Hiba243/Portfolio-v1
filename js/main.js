@@ -8,9 +8,20 @@ navLink.forEach(n => n.addEventListener("click", closeMenu));
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+    var sidebar=document.getElementsByClassName("hamburger");
+    if(sidebar[0].classList.contains('active')){
+        var bodyelem=document.getElementsByTagName('body');
+        bodyelem[0].style.position='fixed';
+    }
+    else{
+        var bodyelem=document.getElementsByTagName('body');
+        bodyelem[0].style.position='relative';
+    }
 }
 
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    var bodyelem=document.getElementsByTagName('body');
+    bodyelem[0].style.position='relative';
 }

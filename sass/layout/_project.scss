@@ -1,4 +1,8 @@
 .section-work{
+    &__heading{
+        display: flex;
+        gap: 1rem;
+    }
     &__text{
         &-h1{
             font-size: 4rem;
@@ -49,12 +53,12 @@
         &__text{
             &-h1{
                 font-size: 2rem;
+                font-family:Lora;
                 margin-bottom: 1.5rem;
             }
             &-h2{
                 font-size: 1.5rem;
-                font-weight: 500;
-                margin-bottom: .75rem;
+                margin-bottom: 1.5rem;
                 @include respond(tab-port){
                     font-size: 1.75rem;
                 }
@@ -70,17 +74,12 @@
     }
     
     &__link{
-        width: 10rem;
+        width:16rem;
+        margin-top: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &-l1{
-            color:inherit
-        }
-        &-l2 img{
-            height: 4rem;
-            color:inherit
-        }
+        font-size: 1.5rem;
         @include respond(tab-port){
             font-size: 1.75rem;
         }

@@ -78,9 +78,11 @@
         flex-direction: column;
         background-color:$color-secondary;
         width: 100%;
+        height: 100vh;
         text-align: center;
         transition: 0.3s;
         color:$color-primary;
+        z-index: 100;
     }
 
     .nav-menu.active {
@@ -94,11 +96,14 @@
     }
     .nav-link{
         color:$color-primary;
+        font-size: 5rem;
+        font-family: 'Lora';
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
+        z-index: 150;
     }
 
     .hamburger.active .bar:nth-child(2) {

@@ -1,85 +1,87 @@
 .section-landing-page{
-    position: relative;
-    height: 90vh;
+    height: fit-content;
+    margin-bottom:15rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    width: fit-content;
     @include respond(tab-port){
-        align-items: center;
+        margin-bottom: 4rem;
     }
-    &__text{
-        &-h1{
-        font-size: 4rem;
-        animation-name: moveInDown;
-        animation-duration:1s; 
-        animation-timing-function: ease-out;
-        animation-delay: .5s;
-        backface-visibility: hidden;
-        animation-fill-mode: backwards;
-        /*
-        animation-delay: 3s;  wait 3s, then start animation
-        */
-            @include respond(phone){
-                font-size: 3rem;
-            }
-        }
-        &-h2{
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            @include respond(phone){
-                font-size: 3rem;
-            }
-            animation-name: moveInDown;
-        animation-duration:1s; 
-        animation-timing-function: ease-out;
-        backface-visibility: hidden;
-        animation-delay: .6s;  
-        animation-fill-mode: backwards;
-        
-        }
-        &-t2{
-            font-size: 2rem;
-            max-width: 52vw;
-            margin-bottom: 3rem;
-            @include respond(phone){
-                max-width: fit-content;
-            }
-            animation-name: moveInUp;
-        animation-duration:1s; 
-        animation-timing-function: ease-out;
-        backface-visibility: hidden;
-        animation-delay: .7s;  
-        animation-fill-mode: backwards;
-        }
+}
 
-    }
-}
-.laptop{
-    position: absolute;
-    left:65%;
-    top:20%;
-}
-.girl{
-    display: block;
-    top:20%;
-    left:60%;
-    position: absolute;
-    width: 40%;
-    z-index: 100;
-    animation-name: moveInLeftSmall;
-        animation-duration:1s; 
-        animation-timing-function: ease-out;
-        backface-visibility: hidden;
-        animation-delay: 1.4s;  
-        animation-fill-mode: backwards;
-        overflow: hidden;
-        margin-left:2rem;
-        @media only screen and (min-width:900px) and (max-width:1000px){
-            margin-left: 5rem;
-            top:30%
+.heading{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        align-items: center;
+        &-1{
+            font-size: 8rem;
+            width: 80vw;
+            align-self:flex-end;
+            display: flex;
+            flex-direction: row; 
+            justify-content: flex-end;
+            gap:4rem;
+            @media only screen and (max-width: 768px){
+                justify-content: flex-start;
+                gap:1rem;
+            }
+            @media only screen and (min-width: 600px) and (max-width: 768px){
+                font-size: 4rem;
+            }
         }
-        @include respond(tab-port){
-            display: none;
+        &-2{
+            font-size: 8rem;
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap:4rem;
+            @media only screen and (max-width: 768px){
+                justify-content: flex-start;
+                gap:1rem;
+            }
+            @media only screen and (min-width: 600px) and (max-width: 768px){
+                font-size: 4rem;
+            }
         }
+        &__text{
+            &-1{
+                animation: moveInDown;
+                animation-duration:1s; 
+                animation-timing-function: ease-out;
+                animation-delay: .6s;
+                backface-visibility: hidden;
+                animation-fill-mode: backwards;
+            }
+            &-2{
+                animation: moveInDown;
+                animation-duration:1s; 
+                animation-timing-function: ease-out;
+                animation-delay: .7s;
+                backface-visibility: hidden;
+                animation-fill-mode: backwards;
+            }
+            &-3{
+                animation: moveInDown;
+                animation-duration:1s; 
+                animation-timing-function: ease-out;
+                animation-delay: .8s;
+                backface-visibility: hidden;
+                animation-fill-mode: backwards;
+            }
+            &-4{
+                animation: moveInDown;
+                animation-duration:1s; 
+                animation-timing-function: ease-out;
+                animation-delay: .9s;
+                backface-visibility: hidden;
+                animation-fill-mode: backwards;
+            }
+
+        }
+    }    
 }
+
