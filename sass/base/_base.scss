@@ -25,6 +25,9 @@ body{
     background-color: $color-primary;
     color:$color-secondary;
     padding: 1rem 8rem 2rem 8rem;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+    height:100%;
+    background-size:50px 50px;
     @include respond(tab-port){
         padding:4rem;
     }
@@ -42,9 +45,9 @@ a{
     color:$color-secondary;
     text-decoration: none;
 }
-.hide-me,.hide-left-side,.hide-right-side, .hide-left-side-1, .hide-right-side-1{
-    opacity: 0;
-}
-.hide-me-1,.hide-me-2,.hide-me-3{
-    opacity: 0;
-}
+// .hide-me,.hide-left-side,.hide-right-side, .hide-left-side-1, .hide-right-side-1{
+//     opacity: 0;
+// }
+// .hide-me-1,.hide-me-2,.hide-me-3{
+//     opacity: 0;
+// }

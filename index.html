@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
 
         <title>Hiba Fatima</title>
     </head>
@@ -33,10 +34,11 @@
                 </div>
             </nav>
         </header>
+        <div data-scroll-container>
         <main>
-            <section class="section-landing-page">
+            <section class="section-landing-page" data-scroll-section>
                 <div class="heading-main-1">
-                    <h1 class="heading-main__text-1 heading-main__text-1">Hiba</h1>
+                    <h1 class="heading-main__text-1 heading-main__text-1" data-scroll>Hiba</h1>
                     <h1 class="heading-main__text-1 heading-main__text-2">Fatima</h1>
                 </div>
                 <div class="heading-main-2">
@@ -45,9 +47,9 @@
                 </div>
             </section>
             
-            <section class="section-work" id="work">
+            <section class="section-work" id="work" data-scroll-section>
                 <div class="section-work__heading">
-                    <h1 class="section-work__text-h1 hide-me-1">Selected</h1>
+                    <h1 class="section-work__text-h1 hide-me-1" data-scroll>Selected</h1>
                     <h1 class="section-work__text-h1 hide-me-2">Work</h1>
                 </div>
                 <section class="project project-p1">
@@ -62,7 +64,7 @@
                     </div>
                 </section>
 
-                <section class="project project-p2 ">
+                <section class="project project-p2">
                     <div class="project__img project__img-1 hide-left-side-1">
 
                     </div>
@@ -77,8 +79,8 @@
                 </section>
                 <!--add more projects here, and also add margin bottom to p2-->
             </section>
-
-            <section class="section-about" id="about">
+            
+            <section class="section-about" id="about" data-scroll-section>
                 <div class="section-about__heading">
                     <h1 class="section-about__text-t1 hide-me-1">About</h1>
                     <h1 class="section-about__text-t1 hide-me-2">Me</h1>
@@ -86,29 +88,33 @@
                 <p class="section-about__text-t2 hide-me">I'm a web developer at Deloitte USI. In my spare time, I'm working on side projects to learn more and delve deeper into the world of full-stack web development. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus. Nec ultrices dui sapien eget mi proin sed libero enim. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. </p>
             </section>
 
-            <section class="section-contact " id="contact">
+            <section class="section-contact" id="contact" data-scroll-section>
                 <div class="section-contact__heading">
                     <h1 class="section-contact__text-t1 hide-me-1">Get</h1>
                     <h1 class="section-contact__text-t1 hide-me-2">In</h1>
                     <h1 class="section-contact__text-t1 hide-me-3">Touch</h1>
                 </div>
-                <p class="section-contact__text-t2 hide-me">Have a project in mind? Want to collaborate? Drop me a mail at: <a href="#">xyz@gmail.com</a></p>
+                <p class="section-contact__text-t2 hide-me" data-scroll>Have a project in mind? Want to collaborate? Drop me a mail at: <a href="#">xyz@gmail.com</a></p>
             </section>
+            <section class="footer" data-scroll>
+                <div class="footer__info">
+                    <p class="footer__info__text-t1">Built using.</p>
+                    <p class="footer__info__text-t2">MIT License c 2020  - Present Hiba Fatima</p>
+                </div>
+                <div class="footer__social">
+                    <p class="footer__social__text-t1"><a href="#">LinkedIn</a></p>
+                    <p class="footer__social__text-t2"><a href="#">Github</a></p>
+                </div>
+            </section>
+           
         </main>
-
-        <footer class="footer">
-            <div class="footer__info">
-                <p class="footer__info__text-t1">Built using.</p>
-                <p class="footer__info__text-t2">MIT License c 2020  - Present Hiba Fatima</p>
-            </div>
-            <div class="footer__social">
-                <p class="footer__social__text-t1"><a href="#">LinkedIn</a></p>
-                <p class="footer__social__text-t2"><a href="#">Github</a></p>
-            </div>
-        </footer>
+        
+    </div>
     </body>
-    <script src="js/main.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
     $(document).ready(function(){
     $("a").on('click', function(event) {
@@ -124,66 +130,68 @@
     });
     });
 
-    $(document).ready(function() {
-        $(window).scroll( function(){
-            $('.hide-me-1').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInDown 1.5s .4s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
-            }
-            });
-            $('.hide-me-2').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInDown 1.5s .5s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
-            }
-            });
-            $('.hide-me-3').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInDown 1.5s .6s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
-            }
-            });
-            $('.hide-me').each( function(i){
-                var bottom_of_object = $(this).position().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-                if( bottom_of_window > bottom_of_object ){
-                    $(this).css({"animation":"moveInDown 1.5s","opacity":"1"});              
-                }
-            });
-            $('.hide-left-side').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInLeft 1.5s","opacity":"1"});
-                $(this).toggleClass('project__desc-line');
-            }
-            });
-            $('.hide-left-side-1').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInLeftZoom 1.5s","opacity":"1",});
-            }
-            });
-            $('.hide-right-side-1').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInRightZoom 1.5s","opacity":"1"});
-            }
-            });
-            $('.hide-right-side').each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).css({"animation":"moveInRight 1s","opacity":"1"});
-            }
-            });
-        });
-    });
+    // $(document).ready(function() {
+    //     $(window).scroll( function(){
+    //         $('.hide-me-1').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInDown 1.5s .4s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
+    //         }
+    //         });
+    //         $('.hide-me-2').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInDown 1.5s .5s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
+    //         }
+    //         });
+    //         $('.hide-me-3').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInDown 1.5s .6s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
+    //         }
+    //         });
+    //         $('.hide-me').each( function(i){
+    //             var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //             var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //             if( bottom_of_window > bottom_of_object ){
+    //                 $(this).css({"animation":"moveInDown 1.5s","opacity":"1"});              
+    //             }
+    //         });
+    //         $('.hide-left-side').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInLeft 1.5s","opacity":"1"});
+    //             $(this).toggleClass('project__desc-line');
+    //         }
+    //         });
+    //         $('.hide-left-side-1').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInLeftZoom 1.5s","opacity":"1",});
+    //         }
+    //         });
+    //         $('.hide-right-side-1').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInRightZoom 1.5s","opacity":"1"});
+    //         }
+    //         });
+    //         $('.hide-right-side').each( function(i){
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         if( bottom_of_window > bottom_of_object ){
+    //             $(this).css({"animation":"moveInRight 1s","opacity":"1"});
+    //         }
+    //         });
+    //     });
+    // });
+    
     </script>
+   
 </html>
