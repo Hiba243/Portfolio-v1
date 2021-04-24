@@ -50,11 +50,11 @@
         &__text{
             &-h1{
                 font-size: 2rem;
-                font-family:Lora;
+                font-family: "Archivo Black", sans-serif;
                 margin-bottom: 1.5rem;
             }
             &-t1{
-                font-size: 1.5rem;
+                font-size: 1.75rem;
                 margin-bottom: 1rem;
                 @include respond(tab-port){
                     font-size: 1.75rem;
@@ -64,12 +64,12 @@
     }
     
     &__link{
-        width:16rem;
+        width:19rem;
         margin-top: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         @include respond(tab-port){
             font-size: 1.75rem;
         }

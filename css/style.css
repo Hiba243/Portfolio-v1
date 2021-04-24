@@ -27,6 +27,7 @@ body {
   padding: 1rem 8rem 2rem 8rem;
   background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
   height: 100%;
+  overflow-x: hidden;
   background-size: 50px 50px; }
   @media only screen and (max-width: 56.25em) {
     body {
@@ -42,6 +43,9 @@ body {
 a {
   color: #EFEBE8;
   text-decoration: none; }
+
+a:hover {
+  color: #f94444; }
 
 .hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1 {
   opacity: 0; }
@@ -106,13 +110,12 @@ a {
 body {
   font-family: "Roboto", sans-serif;
   /* font-size: 16px; */
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.7;
   color: #EFEBE8; }
 
 h1 {
-  font-weight: 100;
-  font-family: "Lora", sans-serif; }
+  font-family: "Archivo Black", sans-serif; }
   @media only screen and (max-width: 37.5em) {
     h1 {
       font-size: 3rem !important; } }
@@ -257,8 +260,8 @@ h3 {
     margin: 2.5rem 0; }
   .nav-link {
     color: #252525;
-    font-size: 5rem;
-    font-family: 'Lora'; }
+    font-family: "Archivo Black";
+    font-size: 5rem; }
   .hamburger {
     display: block;
     cursor: pointer;
@@ -409,21 +412,21 @@ h3 {
         padding-bottom: 0; } }
     .project__desc__text-h1 {
       font-size: 2rem;
-      font-family: Lora;
+      font-family: "Archivo Black", sans-serif;
       margin-bottom: 1.5rem; }
     .project__desc__text-t1 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin-bottom: 1rem; }
       @media only screen and (max-width: 56.25em) {
         .project__desc__text-t1 {
           font-size: 1.75rem; } }
   .project__link {
-    width: 16rem;
+    width: 19rem;
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.5rem; }
+    font-size: 1.75rem; }
     @media only screen and (max-width: 56.25em) {
       .project__link {
         font-size: 1.75rem; } }
