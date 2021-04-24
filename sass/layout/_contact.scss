@@ -5,19 +5,31 @@
     justify-content: space-evenly;
     &__heading{
         display: flex;
-        gap:1rem;
+        justify-content: center;
+        gap:3rem;
+        @include respond(phone){
+            gap:1rem
+        }
+        @include respond(tab-land){
+        justify-content: flex-start;
+        }
     }
     &__text{
         &-t1{
-            font-size: 4rem;
+            font-size: 10rem;
             margin: 6rem 0 2rem 0;
             @include respond(tab-port){
                 margin-top: 4rem;
+                font-size: 5rem;
             }
         }
         &-t2{
-            font-size: 2rem;
+            font-size: 1.85rem;
             margin: 4rem 0 2rem 0;
+            align-self: center;
+            @include respond(tab-land){
+                align-self: flex-start;
+            }
             @include respond(tab-port){
                 margin-top: 0;
                 margin-bottom: 0;

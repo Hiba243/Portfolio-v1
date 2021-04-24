@@ -1,11 +1,18 @@
 .section-work{
     &__heading{
         display: flex;
-        gap: 1rem;
+        gap: 3rem;
+        justify-content: flex-end;
+        @include respond(tab-land){
+            justify-content: flex-start;
+        }
+        @include respond(phone){
+            gap:1rem
+        }
     }
     &__text{
         &-h1{
-            font-size: 4rem;
+            font-size: 7rem;
             margin: 0 0 6rem 0;
             @include respond(tab-port){
                 margin-bottom: 3rem;

@@ -5,19 +5,24 @@
     justify-content: space-evenly;
     &__heading{
         display: flex;
-        gap: 1rem;
+        gap: 3rem;
+        @include respond(phone){
+            gap:1rem
+        }
     }
     &__text{
         &-t1{
-            font-size: 4rem;
+            font-size: 7rem;
             margin: 8rem 0 2rem 0;
             @include respond(tab-port){
                 margin-top: 4rem;
             }
         }
         &-t2{
-            font-size: 2rem;
+            font-size: 1.85rem;
             margin: 4rem 0 2rem 0;
+            display: flex;
+            flex-direction: column;
             @include respond(tab-port){
                 margin-top: 0;
                 margin-bottom: 0;
@@ -25,4 +30,25 @@
             }
         }
     }
+}
+.background{
+    width: 52rem;
+    margin-bottom: 4rem;
+    @include respond(tab-land){
+    width: 100%;
+    }
+}
+.process{
+    align-self: flex-end;
+    width: 52rem;
+    margin-bottom: 4rem;
+    @include respond(tab-land){
+        width: 100%;
+        }
+}
+.tools{
+    width: 52rem;
+    @include respond(tab-land){
+        width: 100%;
+        }
 }

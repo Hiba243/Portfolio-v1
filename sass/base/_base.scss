@@ -25,10 +25,10 @@ body{
     background-color: $color-primary;
     color:$color-secondary;
     padding: 1rem 8rem 2rem 8rem;
-    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+    background-image: linear-gradient(90deg, transparent 24%, rgba(247,37,133, .07) 28%, rgba(247,37,133, .07) 26%, transparent 27%, transparent 74%, rgba(247,37,133, .07) 708%, rgba(247,37,133, .07) 76%, transparent 77%, transparent);
     height:100%;
     overflow-x: hidden;
-    background-size:50px 50px;
+    background-size:80px 50px;
     @include respond(tab-port){
         padding:4rem;
     }
@@ -47,7 +47,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color:#f94444;
+    color:$color-accent;
 }
 .hide-me,.hide-left-side,.hide-right-side, .hide-left-side-1, .hide-right-side-1{
     opacity: 0;
@@ -55,3 +55,58 @@ a:hover{
 .hide-me-1,.hide-me-2,.hide-me-3{
     opacity: 0;
 }
+
+
+input {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .copy-click {
+    position: relative;
+    padding-bottom: 2px;
+    text-decoration: none;
+    
+    color: $color-accent;
+    border-bottom: 1px solid $color-accent;
+    transition: background-color calc(var(--duration) * 2) var(--ease);
+    
+    &:after {
+      content: attr(data-tooltip-text);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      padding: 8px 16px;
+      white-space: nowrap;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 0 0 -12px rgba(0,0,0,0);
+      pointer-events: none;
+      backface-visibility: hidden;
+      opacity: 0;
+      transform: translate(-50%, 12px);
+      transition: 
+        box-shadow calc(var(--duration) / 1.5) var(--bounce),
+        opacity calc(var(--duration) / 1.5) var(--bounce),
+        transform calc(var(--duration) / 1.5) var(--bounce);
+    }
+   
+    &.is-hovered {    
+      &:after {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+        opacity: 1;
+        transform: translate(-50%, 0);
+        transition-timing-function: var(--ease);
+      }
+    }
+    
+    &.is-copied {
+      background-color: $color-secondary;
+      
+      &:after { 
+        content: attr(data-tooltip-text-copied); 
+      }
+    }
+  }

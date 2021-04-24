@@ -1,4 +1,9 @@
 $color-primary:#252525;
-$color-secondary:#EFEBE8;
-
+$color-secondary:#FAF6F0;
+$color-accent:#C5075D;
+:root {
+    --duration: 400ms;
+    --ease: cubic-bezier(0.19, 1, 0.22, 1);
+    --bounce: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
 //#EFEBE8

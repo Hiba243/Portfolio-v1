@@ -18,12 +18,15 @@
         align-items: center;
         &-1{
             font-size: 8rem;
+            @include respond(tab-land){
+            font-size: 7rem;
+            }
             width: 80vw;
             align-self:flex-end;
             display: flex;
             flex-direction: row; 
             justify-content: flex-end;
-            gap:4rem;
+            gap:3rem;
             @media only screen and (max-width: 768px){
                 justify-content: flex-start;
                 gap:1rem;
@@ -34,11 +37,14 @@
         }
         &-2{
             font-size: 8rem;
+            @include respond(tab-land){
+                font-size: 7rem;
+                }
             width: 80vw;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            gap:4rem;
+            gap:3rem;
             @media only screen and (max-width: 768px){
                 justify-content: flex-start;
                 gap:1rem;
@@ -48,7 +54,7 @@
             }
         }
         &__text{
-            &-1{
+            &-p1{
                 animation: moveInDown;
                 animation-duration:1s; 
                 animation-timing-function: ease-out;
@@ -56,7 +62,7 @@
                 backface-visibility: hidden;
                 animation-fill-mode: backwards;
             }
-            &-2{
+            &-p2{
                 animation: moveInDown;
                 animation-duration:1s; 
                 animation-timing-function: ease-out;
@@ -64,7 +70,7 @@
                 backface-visibility: hidden;
                 animation-fill-mode: backwards;
             }
-            &-3{
+            &-p3{
                 animation: moveInDown;
                 animation-duration:1s; 
                 animation-timing-function: ease-out;
@@ -72,7 +78,7 @@
                 backface-visibility: hidden;
                 animation-fill-mode: backwards;
             }
-            &-4{
+            &-p4{
                 animation: moveInDown;
                 animation-duration:1s; 
                 animation-timing-function: ease-out;
