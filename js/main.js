@@ -25,8 +25,3 @@ function closeMenu() {
     var bodyelem=document.getElementsByTagName('body');
     bodyelem[0].style.position='relative';
 }
-
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
