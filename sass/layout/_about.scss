@@ -6,7 +6,7 @@
     &__heading{
         display: flex;
         gap: 3rem;
-        @include respond(phone){
+        @include respond(tab-port){
             gap:1rem
         }
     }
@@ -14,12 +14,19 @@
         &-t1{
             font-size: 7rem;
             margin: 8rem 0 2rem 0;
+            @supports (-webkit-text-stroke: 1px black) {                
+                -webkit-text-stroke: 1px $color-secondary;
+                -webkit-text-fill-color: transparent;                
+            }
             @include respond(tab-port){
+                font-size: 4rem;
                 margin-top: 4rem;
+                -webkit-text-fill-color: $color-secondary;  
+                -webkit-text-stroke: 0px;
             }
         }
         &-t2{
-            font-size: 1.85rem;
+            font-size: 1.65rem;
             margin: 4rem 0 2rem 0;
             display: flex;
             flex-direction: column;

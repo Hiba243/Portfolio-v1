@@ -25,7 +25,7 @@ body{
     background-color: $color-primary;
     color:$color-secondary;
     padding: 1rem 8rem 2rem 8rem;
-    background-image: linear-gradient(90deg, transparent 24%, rgba(247,37,133, .07) 28%, rgba(247,37,133, .07) 26%, transparent 27%, transparent 74%, rgba(247,37,133, .07) 708%, rgba(247,37,133, .07) 76%, transparent 77%, transparent);
+    background-image: linear-gradient(90deg, transparent 24%, rgba(247,37,133, .15) 28%, rgba(247,37,133, .2) 26%, transparent 27%, transparent 74%, rgba(247,37,133, .2) 708%, rgba(247,37,133, .2) 76%, transparent 77%, transparent);
     height:100%;
     overflow-x: hidden;
     background-size:80px 50px;
@@ -35,11 +35,6 @@ body{
     @include respond(phone){
         padding:2rem;
     }
-}
-
-::selection{
-    background-color: $color-secondary;
-    color:$color-primary;
 }
 
 a{

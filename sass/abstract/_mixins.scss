@@ -13,7 +13,7 @@
 }
 
 //MEDIA QUERY MANAGER
-//1 em =16px
+//1 em =16px x =940
 //600, 900,1200,1800 px
 //order: base, typography > layout,grid > page layout > components
 @mixin respond($breakpoint){
@@ -21,7 +21,7 @@
         @media only screen and (max-width:37.5em){ @content } 
     } 
     @if $breakpoint == tab-port{
-        @media only screen and (max-width:56.25em){
+        @media only screen and (max-width:58.75em){
             @content
         } 
     }

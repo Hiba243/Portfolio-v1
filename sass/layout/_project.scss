@@ -6,7 +6,7 @@
         @include respond(tab-land){
             justify-content: flex-start;
         }
-        @include respond(phone){
+        @include respond(tab-port){
             gap:1rem
         }
     }
@@ -14,8 +14,15 @@
         &-h1{
             font-size: 7rem;
             margin: 0 0 6rem 0;
+            @supports (-webkit-text-stroke: 1px black) {                
+                  -webkit-text-stroke: 1px $color-secondary;
+                  -webkit-text-fill-color: transparent;                
+            }
             @include respond(tab-port){
+                font-size: 4rem;
                 margin-bottom: 3rem;
+                -webkit-text-fill-color: $color-secondary;  
+                -webkit-text-stroke: 0px;
             }
         }
     }
@@ -56,12 +63,12 @@
             }
         &__text{
             &-h1{
-                font-size: 2rem;
+                font-size: 1.65rem;
                 font-family: "Archivo Black", sans-serif;
                 margin-bottom: 1.5rem;
             }
             &-t1{
-                font-size: 1.75rem;
+                font-size: 1.65rem;
                 margin-bottom: 1rem;
                 @include respond(tab-port){
                     font-size: 1.75rem;
@@ -76,7 +83,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 1.75rem;
+        font-size: 1.65rem;
         @include respond(tab-port){
             font-size: 1.75rem;
         }
