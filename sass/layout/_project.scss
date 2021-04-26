@@ -1,23 +1,9 @@
 .section-work{
-    &__heading{
-        display: flex;
-        gap: 3rem;
-        justify-content: flex-end;
-        @include respond(tab-land){
-            justify-content: flex-start;
-        }
-        @include respond(tab-port){
-            gap:1rem
-        }
-    }
     &__text{
         &-h1{
-            font-size: 7rem;
+            font-size: 3rem;
             margin: 0 0 6rem 0;
-            @supports (-webkit-text-stroke: 1px black) {                
-                  -webkit-text-stroke: 1px $color-secondary;
-                  -webkit-text-fill-color: transparent;                
-            }
+            margin-top: 20vh;
             @include respond(tab-port){
                 font-size: 4rem;
                 margin-bottom: 3rem;
@@ -29,26 +15,24 @@
 }
 .project{
     display: flex;
-    @include respond(tab-port){
-        flex-direction: column;
-    }
+    flex-direction: column;
+    gap:3rem;
     &__img{
         background-color: $color-secondary;
-        height: 60vh;
-        width: 581px;
+        width:100%;
+        height:90vh;
         @include respond(tab-port){
             width: 100%;
         }
     }
     &__desc{
-        margin-left: 3rem;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding-bottom: 3rem;
-        border-bottom: 1px solid $color-secondary;
-        height: 60vh;
-        width: 45%;
+        flex-direction: row;
+        &-content{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
         @include respond(tab-port){
             width:100%;
             height: fit-content;
@@ -56,20 +40,12 @@
             margin-top: 2rem;
             margin-left: 0;
         }
-        &-p2{
-            @include respond(tab-port){
-                padding-bottom: 0;
-            }
-            }
         &__text{
             &-h1{
-                font-size: 1.65rem;
-                font-family: "Archivo Black", sans-serif;
-                margin-bottom: 1.5rem;
+                font-size: 2rem;
             }
             &-t1{
                 font-size: 1.65rem;
-                margin-bottom: 1rem;
                 @include respond(tab-port){
                     font-size: 1.75rem;
                 }
@@ -78,11 +54,11 @@
     }
     
     &__link{
-        width:19rem;
-        margin-top: 1rem;
+        width:40%;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
         font-size: 1.65rem;
         @include respond(tab-port){
             font-size: 1.75rem;
@@ -94,25 +70,6 @@
             margin-bottom: 5rem;
         }
     }
-    &-p2 .project__img{
-        order: 2;
-        @include respond(tab-port){
-            order:1;
-        }
-    }
-    &-p2 .project__desc{
-        order:1;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-right: 3rem;
-        margin-left: 0;
-        
-        @include respond(tab-port){
-        order:2;
-        justify-content: center;
-        align-items: flex-start;
-        border-bottom: none;
-        margin-right: 0;
-        }
-    }
+    
+    
 }

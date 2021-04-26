@@ -12,12 +12,8 @@
     }
     &__text{
         &-t1{
-            font-size: 7rem;
+            font-size: 3rem;
             margin: 8rem 0 2rem 0;
-            @supports (-webkit-text-stroke: 1px black) {                
-                -webkit-text-stroke: 1px $color-secondary;
-                -webkit-text-fill-color: transparent;                
-            }
             @include respond(tab-port){
                 font-size: 4rem;
                 margin-top: 4rem;
@@ -46,7 +42,6 @@
     }
 }
 .process{
-    align-self: flex-end;
     width: 52rem;
     margin-bottom: 4rem;
     @include respond(tab-land){

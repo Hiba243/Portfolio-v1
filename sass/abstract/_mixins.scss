@@ -18,10 +18,10 @@
 //order: base, typography > layout,grid > page layout > components
 @mixin respond($breakpoint){
     @if $breakpoint == phone{
-        @media only screen and (max-width:37.5em){ @content } 
+        @media only screen and (max-width:26.875em){ @content } 
     } 
     @if $breakpoint == tab-port{
-        @media only screen and (max-width:58.75em){
+        @media only screen and (max-width:45em){
             @content
         } 
     }

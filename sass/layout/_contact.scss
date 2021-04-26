@@ -1,46 +1,6 @@
 .section-contact{
-    height: fit-content;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    &__heading{
-        display: flex;
-        justify-content: center;
-        gap:3rem;
-        @include respond(tab-port){
-            gap:1rem
-        }
-        @include respond(tab-land){
-        justify-content: flex-start;
-        }
-    }
-    &__text{
-        &-t1{
-            font-size: 7rem;
-            margin: 6rem 0 2rem 0;
-            @supports (-webkit-text-stroke: 1px black) {                
-                -webkit-text-stroke: 1px $color-secondary;
-                -webkit-text-fill-color: transparent;                
-            }
-            @include respond(tab-port){
-                margin-top: 4rem;
-                font-size: 4rem;
-                -webkit-text-fill-color: $color-secondary;  
-                -webkit-text-stroke: 0px;
-            }
-        }
-        &-t2{
-            font-size: 1.65rem;
-            margin: 4rem 0 2rem 0;
-            align-self: center;
-            @include respond(tab-land){
-                align-self: flex-start;
-            }
-            @include respond(tab-port){
-                margin-top: 0;
-                margin-bottom: 0;
-                font-size: 1.75rem;
-            }
-        }
-    }
+    font-size: 4rem;
+    gap:2rem;
+    margin: 12rem 0 4rem 0;
 }
