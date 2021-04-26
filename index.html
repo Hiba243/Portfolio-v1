@@ -9,7 +9,7 @@
      
         
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+       
         
         <title>Hiba Fatima</title>
     </head>
@@ -41,12 +41,12 @@
                     <p class="heading-main__text-p3  parallax-1">&nbsp; I’m Hiba Fatima, a web developer who builds and designs web apps and websites. I'm working with brands to create their identities, tell visual stories and build digital products. Let’s make something great! <a href="" class="copy-click" data-tooltip-text="Click to copy" data-tooltip-text-copied="✔ Copied to clipboard">xyz@gmail.com</a></p>
             </section>
             
-            <section class="section-work" id="work">
+            <section class="section-work .section" id="work">
                 <div class="section-work__heading">
-                    <p class="section-work__text-h1">Selected Work &rarr;</p>
+                    <p class="section-work__text-h1 hide-me-1">Selected Work &rarr;</p>
                 </div>
                 <section class="project project-p1">
-                    <div class="project__img" data-scroll data-scroll-speed="4">img</div>
+                    <div class="project__img hide-right-side-1" >img</div>
                     <div class="project__desc">
                         <div class="project__desc-content">
                         <p class="project__desc__text-h1">Project Name</p>
@@ -58,9 +58,9 @@
                         </div>
                     </div>
                 </section>
-                <hr>
+                <hr class=".trans--grow hide-hr">
                 <section class="project project-p1">
-                    <div class="project__img" data-scroll data-scroll-speed="4">img</div>
+                    <div class="project__img hide-left-side-1" >img</div>
                     <div class="project__desc">
                         <div class="project__desc-content">
                         <p class="project__desc__text-h1">Project Name</p>
@@ -77,13 +77,13 @@
             
             <section class="section-about" id="about">
                 <div class="section-about__heading">
-                    <p class="section-about__text-t1">About Me &rarr;</p>
+                    <p class="section-about__text-t1 hide-me-1">About Me &rarr;</p>
                 </div>
                 <div class="section-about__text-t2">
                     <div class="section-about__content">
-                        <div class="background">I'm a web developer at Deloitte USI. In my spare time, I'm working on side projects to learn more and delve deeper into the world of full-stack web development. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus. Nec ultrices dui sapien eget mi proin sed libero enim. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. </div>
-                        <div class="process">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit illum ex neque consequuntur repudiandae culpa, magnam eius repellat dolore minus soluta, ipsum nesciunt non quaerat tempore modi suscipit hic amet?</div>    
-                        <div class="tools">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eveniet saepe, velit fugiat quis repellendus et rem. At neque maxime velit quia, dolorem alias aliquid maiores tenetur sunt nihil recusandae.</div>
+                        <div class="background hide-me-1">I'm a web developer at Deloitte USI. In my spare time, I'm working on side projects to learn more and delve deeper into the world of full-stack web development. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus. Nec ultrices dui sapien eget mi proin sed libero enim. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. </div>
+                        <div class="process hide-me-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit illum ex neque consequuntur repudiandae culpa, magnam eius repellat dolore minus soluta, ipsum nesciunt non quaerat tempore modi suscipit hic amet?</div>    
+                        <div class="tools hide-me-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eveniet saepe, velit fugiat quis repellendus et rem. At neque maxime velit quia, dolorem alias aliquid maiores tenetur sunt nihil recusandae.</div>
                     </div>
                     <div class="section-about__img">img</div>
                 </div>
@@ -99,8 +99,106 @@
             </section>                
         </main>  
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    
     
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        
+        
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+            window.location.hash = hash;
+        });
+        } 
+    });
+    });
+    
+    $(document).ready(function() {
+        $(window).scroll( function(){
+            var wScroll = $(this).scrollTop();
+            
+            $(".parallax-1").css({
+                transform: "translateY(-" + wScroll / 23 + "%)"
+            })
+            $(".parallax-2").css({
+                transform: "translateX(" + wScroll / 23 + "%)"
+            })
+            $('.hide-me-1').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInDown 1.5s .4s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});                           
+            }
+            });
+            $('.hide-hr').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"lineGrow 1.5s .4s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});                           
+                
+            }
+            });
+            $('.hide-me-2').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInDown 1.5s .5s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
+            }
+            });
+            $('.hide-me-3').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInDown 1.5s .6s","opacity":"1", "backface-visibility":"hidden","animation-fill-mode": "backwards"});
+            }
+            });
+            $('.hide-me').each( function(i){
+                var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if( bottom_of_window > bottom_of_object ){
+                    $(this).css({"animation":"moveInDown 1.5s","opacity":"1"});              
+                }
+            });
+            $('.hide-left-side').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInLeft 1.5s","opacity":"1"});
+                $(this).toggleClass('project__desc-line');
+            }
+            });
+            $('.hide-left-side-1').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInLeftZoom 1.5s","opacity":"1",});
+            }
+            });
+            $('.hide-right-side-1').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInRightZoom 1.5s","opacity":"1"});
+            }
+            });
+            $('.hide-right-side').each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).css({"animation":"moveInRight 1s","opacity":"1"});
+            }
+            });
+        });
+        
+    });
+    </script>
     
 </html>

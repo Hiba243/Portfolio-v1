@@ -28,6 +28,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: #0c0c0c;
+  transition: background-color 1s ease;
   color: #FAF6F0;
   padding: 1rem 4rem 2rem 4rem;
   overflow-x: hidden; }
@@ -51,6 +52,12 @@ a {
 
 a:hover {
   color: rgba(255, 255, 255, 0.6); }
+
+.hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1 {
+  opacity: 0; }
+
+.hide-me-1, .hide-me-2, .hide-me-3, .hide-hr {
+  opacity: 0; }
 
 input {
   margin: 1rem 0;
@@ -153,6 +160,12 @@ input {
     transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0s cubic-bezier(0.215, 0.61, 0.355, 1); }
   100% {
     opacity: 1; } }
+
+@keyframes lineGrow {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -407,7 +420,9 @@ h1 {
         margin-bottom: 5rem; } }
 
 hr {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  border-bottom: solid 3px #FAF6F0;
+  border-top-width: 0px; }
 
 .section-about {
   height: fit-content;
