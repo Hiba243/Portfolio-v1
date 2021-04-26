@@ -1,3 +1,8 @@
+const scroller = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
@@ -64,4 +69,5 @@ Array.from(links).forEach(link => {
     }
   });
 });
+
 

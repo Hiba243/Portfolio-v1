@@ -31,24 +31,12 @@
         }
         &__text{
             &-p1,&-p2,&-p3,&-p4{
-                animation: moveInDown;
-                animation-duration:1s; 
-                animation-timing-function: ease-out;
-                animation-delay: .6s;
-                backface-visibility: hidden;
-                animation-fill-mode: backwards;
+                animation: moveFromDown;
+                animation-delay: .1s;
+                animation-duration: 2s;
             }
-            &-p2{
-                animation-delay: .7s;
-            }
-            &-p3{
-                animation-delay: .8s;
-            }
-            &-p4{
-                animation-delay: .9s;
-            }
+        
 
         }
     }    
 }
-

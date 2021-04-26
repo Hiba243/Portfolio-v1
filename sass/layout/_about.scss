@@ -10,6 +10,21 @@
             gap:1rem
         }
     }
+    &__content{
+        display: flex;
+        flex-direction: column;
+       width: 50%;
+       @include respond(tab-port){
+       width: 100%;
+        }
+    }
+    &__img{
+        width: 50%;
+        background-color: $color-secondary;
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
     &__text{
         &-t1{
             font-size: 3rem;
@@ -25,8 +40,10 @@
             font-size: 1.65rem;
             margin: 4rem 0 2rem 0;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap:2rem;
             @include respond(tab-port){
+                flex-direction: column;
                 margin-top: 0;
                 margin-bottom: 0;
                 font-size: 1.75rem;
@@ -35,21 +52,18 @@
     }
 }
 .background{
-    width: 52rem;
     margin-bottom: 4rem;
     @include respond(tab-land){
     width: 100%;
     }
 }
 .process{
-    width: 52rem;
     margin-bottom: 4rem;
     @include respond(tab-land){
         width: 100%;
         }
 }
 .tools{
-    width: 52rem;
     @include respond(tab-land){
         width: 100%;
         }

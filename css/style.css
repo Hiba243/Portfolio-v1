@@ -29,10 +29,11 @@ body {
   box-sizing: border-box;
   background-color: #0c0c0c;
   color: #FAF6F0;
-  padding: 1rem 8rem 2rem 8rem;
-  height: 100%;
-  overflow-x: hidden;
-  background-size: 80px 50px; }
+  padding: 1rem 4rem 2rem 4rem;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 75em) {
+    body {
+      padding: 3rem; } }
   @media only screen and (max-width: 45em) {
     body {
       padding: 3rem; } }
@@ -50,12 +51,6 @@ a {
 
 a:hover {
   color: rgba(255, 255, 255, 0.6); }
-
-.hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1 {
-  opacity: 0; }
-
-.hide-me-1, .hide-me-2, .hide-me-3 {
-  opacity: 0; }
 
 input {
   margin: 1rem 0;
@@ -149,6 +144,16 @@ input {
     transform: translate(0);
     /*so that it looks exactly how it is without animation*/ } }
 
+@keyframes moveFromDown {
+  0% {
+    opacity: 0;
+    transform-origin: center top;
+    transform-style: preserve-3d;
+    transform: translateY(-100%) rotateX(80deg);
+    transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  100% {
+    opacity: 1; } }
+
 body {
   font-family: "Roboto", sans-serif;
   /* font-size: 16px; */
@@ -239,39 +244,19 @@ h1 {
 
 .nav-item {
   margin-left: 5rem; }
-  .nav-item-1 {
-    animation-name: moveInDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    backface-visibility: hidden;
-    animation-delay: .2s;
-    animation-fill-mode: backwards; }
-  .nav-item-2 {
-    animation-name: moveInDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    backface-visibility: hidden;
-    animation-delay: .3s;
-    animation-fill-mode: backwards; }
-  .nav-item-3 {
-    animation-name: moveInDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    backface-visibility: hidden;
-    animation-delay: .4s;
-    animation-fill-mode: backwards; }
+  .nav-item-1, .nav-item-2, .nav-item-3 {
+    animation: moveFromDown;
+    animation-delay: .1s;
+    animation-duration: 1.5s; }
 
 .nav-link {
   font-size: 1.65rem; }
 
 .nav-logo {
   font-size: 1.65rem;
-  animation-name: moveInDown;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  backface-visibility: hidden;
-  animation-delay: .2s;
-  animation-fill-mode: backwards; }
+  animation: moveFromDown;
+  animation-delay: .1s;
+  animation-duration: 1.5s; }
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
@@ -358,21 +343,9 @@ h1 {
       justify-content: flex-start; } }
 
 .heading-main__text-p1, .heading-main__text-p2, .heading-main__text-p3, .heading-main__text-p4 {
-  animation: moveInDown;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-delay: .6s;
-  backface-visibility: hidden;
-  animation-fill-mode: backwards; }
-
-.heading-main__text-p2 {
-  animation-delay: .7s; }
-
-.heading-main__text-p3 {
-  animation-delay: .8s; }
-
-.heading-main__text-p4 {
-  animation-delay: .9s; }
+  animation: moveFromDown;
+  animation-delay: .1s;
+  animation-duration: 2s; }
 
 .section-work__text-h1 {
   font-size: 3rem;
@@ -428,10 +401,13 @@ h1 {
       .project__link {
         font-size: 1.75rem; } }
   .project-p1 {
-    margin-bottom: 10rem; }
+    margin-bottom: 5rem; }
     @media only screen and (max-width: 45em) {
       .project-p1 {
         margin-bottom: 5rem; } }
+
+hr {
+  margin-bottom: 5rem; }
 
 .section-about {
   height: fit-content;
@@ -444,6 +420,19 @@ h1 {
     @media only screen and (max-width: 45em) {
       .section-about__heading {
         gap: 1rem; } }
+  .section-about__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%; }
+    @media only screen and (max-width: 45em) {
+      .section-about__content {
+        width: 100%; } }
+  .section-about__img {
+    width: 50%;
+    background-color: #FAF6F0; }
+    @media only screen and (max-width: 45em) {
+      .section-about__img {
+        width: 100%; } }
   .section-about__text-t1 {
     font-size: 3rem;
     margin: 8rem 0 2rem 0; }
@@ -457,35 +446,36 @@ h1 {
     font-size: 1.65rem;
     margin: 4rem 0 2rem 0;
     display: flex;
-    flex-direction: column; }
+    flex-direction: row;
+    gap: 2rem; }
     @media only screen and (max-width: 45em) {
       .section-about__text-t2 {
+        flex-direction: column;
         margin-top: 0;
         margin-bottom: 0;
         font-size: 1.75rem; } }
 
 .background {
-  width: 52rem;
   margin-bottom: 4rem; }
   @media only screen and (max-width: 75em) {
     .background {
       width: 100%; } }
 
 .process {
-  width: 52rem;
   margin-bottom: 4rem; }
   @media only screen and (max-width: 75em) {
     .process {
       width: 100%; } }
 
-.tools {
-  width: 52rem; }
-  @media only screen and (max-width: 75em) {
-    .tools {
-      width: 100%; } }
+@media only screen and (max-width: 75em) {
+  .tools {
+    width: 100%; } }
 
 .section-contact {
   display: flex;
   font-size: 4rem;
   gap: 2rem;
   margin: 12rem 0 4rem 0; }
+  @media only screen and (max-width: 45em) {
+    .section-contact {
+      font-size: 2rem; } }
