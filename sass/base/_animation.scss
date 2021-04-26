@@ -76,9 +76,10 @@
 @keyframes lineGrow{
     0%{
        width: 0%;
-                 
+       border-bottom-width: 0px;     
     }
     100%{
         width: 100%;
+        border-bottom-width: 100%;
     }
 }

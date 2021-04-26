@@ -51,7 +51,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: rgba(255, 255, 255, 0.6); }
+  color: #CF1259; }
 
 .hide-me, .hide-left-side, .hide-right-side, .hide-left-side-1, .hide-right-side-1 {
   opacity: 0; }
@@ -96,6 +96,34 @@ input {
     background-color: rgba(255, 255, 255, 0.6); }
     .copy-click.is-copied:after {
       content: attr(data-tooltip-text-copied); }
+
+* {
+  cursor: none; }
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #FAF6F0;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 200ms ease-out; }
+
+.cursor2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #CF1259;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s; }
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5; }
 
 @keyframes moveInUp {
   0% {
@@ -163,9 +191,11 @@ input {
 
 @keyframes lineGrow {
   0% {
-    width: 0%; }
+    width: 0%;
+    border-bottom-width: 0px; }
   100% {
-    width: 100%; } }
+    width: 100%;
+    border-bottom-width: 100%; } }
 
 body {
   font-family: "Roboto", sans-serif;
