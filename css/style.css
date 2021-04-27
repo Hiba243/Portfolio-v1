@@ -265,15 +265,19 @@ body {
 .nav__item {
   margin-left: 5rem; }
   .nav__item-1, .nav__item-2, .nav__item-3 {
-    animation: moveFromDown 1s .8s; }
+    animation: moveFromDown 1s 1s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards; }
   .nav__item-2 {
-    animation-delay: .85s; }
+    animation-delay: 1.2s; }
   .nav__item-3 {
-    animation-delay: .9s; }
+    animation-delay: 1.4s; }
 
 .nav__logo {
   font-size: 1.65rem;
-  animation: moveFromDown 1s .8s; }
+  animation: moveFromDown 1s 0.8s;
+  backface-visibility: hidden;
+  animation-fill-mode: backwards; }
 
 .hamburger {
   display: none; }
@@ -306,6 +310,8 @@ body {
   .nav__link {
     color: #0c0c0c;
     font-size: 3rem; }
+  .nav__logo {
+    font-size: 3rem; }
   .nav__menu.active {
     left: 0;
     top: 0;
@@ -331,7 +337,7 @@ body {
   flex-direction: column;
   height: 75vh;
   justify-content: flex-end; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 395px) {
     .section-landing-page {
       height: fit-content; } }
 
@@ -342,7 +348,9 @@ body {
       font-size: 3rem;
       margin-top: 20vh; } }
   .heading-main__text {
-    animation: moveFromDown 1s .8s; }
+    animation: moveFromDown 2s 0.7s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards; }
 
 .section-work__heading__text {
   font-size: 3rem;
@@ -383,7 +391,7 @@ body {
       font-size: 1.65rem; }
       @media only screen and (max-width: 45em) {
         .project__desc__text-t1 {
-          font-size: 1.75rem; } }
+          font-size: 2rem; } }
   .project__link {
     width: 40%;
     display: flex;
@@ -393,7 +401,7 @@ body {
     font-size: 1.65rem; }
     @media only screen and (max-width: 45em) {
       .project__link {
-        font-size: 1.75rem; } }
+        font-size: 2rem; } }
   .project-p1 {
     margin-bottom: 5rem; }
     @media only screen and (max-width: 45em) {
@@ -427,7 +435,7 @@ hr {
         flex-direction: column;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 1.75rem; } }
+        font-size: 2rem; } }
     .section-about__content__text {
       display: flex;
       flex-direction: column;
@@ -455,3 +463,8 @@ hr {
   @media only screen and (max-width: 75em) {
     .section-contact {
       font-size: 3rem; } }
+  @media only screen and (max-width: 45em) {
+    .section-contact {
+      font-size: 2rem; } }
+  .section-contact__social {
+    align-self: center; }

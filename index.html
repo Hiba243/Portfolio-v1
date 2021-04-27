@@ -147,7 +147,7 @@
             >xyz@gmail.com</a
           >
         </p>
-        <div>
+        <div class="section-contact__social">
           <p><a href="#">LinkedIn</a></p>
           <p><a href="#">Github</a></p>
         </div>
@@ -190,7 +190,7 @@
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           if (bottom_of_window > bottom_of_object) {
             $(this).css({
-              animation: "moveFromDown .7s .4s",
+              animation: "moveFromDown 1s .4s",
               opacity: "1",
               "backface-visibility": "hidden",
               "animation-fill-mode": "backwards",
@@ -213,19 +213,29 @@
           var bottom_of_object = $(this).position().top + $(this).outerHeight();
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           if (bottom_of_window > bottom_of_object) {
-            $(this).css({ animation: "moveInLeftZoom 1.5s", opacity: "1" });
+            $(this).css({
+              animation: "moveInLeftZoom 1.5s",
+              opacity: "1",
+              "backface-visibility": "hidden",
+              "animation-fill-mode": "backwards",
+            });
           }
         });
         $(".anm-moveRight").each(function (i) {
           var bottom_of_object = $(this).position().top + $(this).outerHeight();
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           if (bottom_of_window > bottom_of_object) {
-            $(this).css({ animation: "moveInRightZoom 1.5s", opacity: "1" });
+            $(this).css({
+              animation: "moveInRightZoom 1.5s",
+              opacity: "1",
+              "backface-visibility": "hidden",
+              "animation-fill-mode": "backwards",
+            });
           }
         });
       });
     });
-    $(window).on('beforeunload', function() {
+    $(window).on("beforeunload", function () {
       $(window).scrollTop(0);
     });
   </script>

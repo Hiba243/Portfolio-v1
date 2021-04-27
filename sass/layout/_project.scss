@@ -42,7 +42,7 @@
       &-t1 {
         font-size: 1.65rem;
         @include respond(tab-port) {
-          font-size: 1.75rem;
+          font-size: 2rem;
         }
       }
     }
@@ -56,7 +56,7 @@
     justify-content: flex-end;
     font-size: 1.65rem;
     @include respond(tab-port) {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
   }
   &-p1 {

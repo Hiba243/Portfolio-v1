@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 75vh;
   justify-content: flex-end;
-  @include respond(tab-land) {
+  @media only screen and (max-width: 395px){
     height: fit-content;
   }
 }
@@ -16,7 +16,9 @@
       margin-top: 20vh;
     }
     &__text {
-      animation: moveFromDown 1s .8s;
+      animation: moveFromDown 2s 0.7s;
+      backface-visibility: hidden;
+      animation-fill-mode: backwards;
     }
   }
 }

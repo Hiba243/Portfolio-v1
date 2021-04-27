@@ -6,4 +6,10 @@
   @include respond(tab-land) {
     font-size: 3rem;
   }
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+  &__social{
+    align-self: center;
+  }
 }

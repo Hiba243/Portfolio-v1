@@ -20,18 +20,22 @@
     &-1,
     &-2,
     &-3 {
-      animation: moveFromDown 1s .8s;
+      animation: moveFromDown 1s 1s;
+      backface-visibility: hidden;
+      animation-fill-mode: backwards;
     }
-    &-2{
-      animation-delay: .85s;
+    &-2 {
+      animation-delay: 1.2s;
     }
-    &-3{
-      animation-delay: .9s;
+    &-3 {
+      animation-delay: 1.4s;
     }
   }
   &__logo {
     font-size: 1.65rem;
-    animation: moveFromDown 1s .8s;
+    animation: moveFromDown 1s 0.8s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards;
   }
 }
 
@@ -70,6 +74,9 @@
     }
     &__link {
       color: $color-primary;
+      font-size: 3rem;
+    }
+    &__logo {
       font-size: 3rem;
     }
   }
