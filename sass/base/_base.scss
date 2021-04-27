@@ -1,143 +1,153 @@
 /*reset browser's default styling*/
 *,
 *::after,
-*::before{
-    margin:0;
-    padding:0;
-    box-sizing: inherit; /*to make box sizing as an inheritable property*/
+*::before {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+  box-sizing: inherit; /*to make box sizing as an inheritable property*/
 }
 
-html{
-    font-size: 62.5%; /*1 rem=10px, 62.5%of root font size 16px=10px*/   
-    @include respond(tab-land){
-        font-size: 56.25%; //1rem  to be  9px , 9/16=56.25%
-    }
-    @include respond(tab-port){
-        font-size: 50%; //1rem  to be  8px, 8/16=50%
-    }
-    @include respond(big-desktop){
-        font-size: 75%; //1rem  to be  12px , 12/16=75%
-    }  
-}
-
-body{
-    box-sizing: border-box;
-    background-color: $color-primary;
-    transition: background-color 1s ease;
-    color:$color-secondary;
-    padding: 1rem 4rem 2rem 4rem;
-    //background-image: linear-gradient(90deg, transparent 24%, rgba(247,37,133, .05) 28%, rgba(247,37,133, .05) 26%, transparent 27%, transparent 74%, rgba(247,37,133, .05) 708%, rgba(247,37,133, .05) 76%, transparent 77%, transparent);
-    overflow-x: hidden;
-   
-    @include respond(tab-land){
-      padding:3rem;
+html {
+  font-size: 62.5%; /*1 rem=10px, 62.5%of root font size 16px=10px*/
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem  to be  9px , 9/16=56.25%
   }
-    @include respond(tab-port){
-        padding:3rem;
-    }
-    @include respond(phone){
-        padding:2rem;
-    }
+  @include respond(tab-port) {
+    font-size: 50%; //1rem  to be  8px, 8/16=50%
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem  to be  12px , 12/16=75%
+  }
 }
-::selection{
+
+body {
+  box-sizing: border-box;
+  background-color: $color-primary;
+  transition: background-color 1s ease;
+  color: $color-secondary;
+  padding: 1rem 4rem 2rem 4rem;
+  overflow-x: hidden;
+  //background-image: linear-gradient(90deg, transparent 24%, rgba(247,37,133, .05) 28%, rgba(247,37,133, .05) 26%, transparent 27%, transparent 74%, rgba(247,37,133, .05) 708%, rgba(247,37,133, .05) 76%, transparent 77%, transparent);
+
+  @include respond(tab-land) {
+    padding: 3rem;
+  }
+  @include respond(tab-port) {
+    padding: 3rem;
+  }
+  @include respond(phone) {
+    padding: 2rem;
+  }
+}
+
+::selection {
   background-color: $color-secondary;
-  color:$color-primary;
+  color: $color-primary;
 }
-a{
-    color:$color-secondary;
-    text-decoration: none;
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
 }
-a:hover{
-    color:$color-accent-pink;
+a:hover {
+  color: $color-accent-pink;
 }
-.hide-me,.hide-left-side,.hide-right-side, .hide-left-side-1, .hide-right-side-1{
-  opacity: 0;
-}
-.hide-me-1,.hide-me-2,.hide-me-3,.hide-hr{
-  opacity: 0;
-}
-input {
-    margin: 1rem 0;
-    padding: 0.5rem;
-    width: 100%;
-    font-size: 1rem;
+
+//animation hide classes
+.anm {
+  &-hr {
+    opacity: 0;
   }
-  
-  .copy-click {
-    position: relative;
-    padding-bottom: 2px;
-    text-decoration: none;
-    border-bottom: 1px solid $color-accent;
-    transition: background-color calc(var(--duration) * 2) var(--ease);
-    
-    &:after {
-      content: attr(data-tooltip-text);
-      position: absolute;
-      bottom: calc(100% + 6px);
-      left: 50%;
-      padding: 8px 16px;
-      white-space: nowrap;
-      background-color: white;
-      color:$color-primary;
-      border-radius: 4px;
-      box-shadow: 0 0 0 -12px rgba(0,0,0,0);
-      pointer-events: none;
-      backface-visibility: hidden;
+  &-move {
+    &Down,
+    &Left,
+    &Right {
       opacity: 0;
-      transform: translate(-50%, 12px);
-      transition: 
-        box-shadow calc(var(--duration) / 1.5) var(--bounce),
-        opacity calc(var(--duration) / 1.5) var(--bounce),
-        transform calc(var(--duration) / 1.5) var(--bounce);
     }
-   
-    &.is-hovered {    
-      &:after {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.10);
-        opacity: 1;
-        transform: translate(-50%, 0);
-        transition-timing-function: var(--ease);
-      }
-    }
-    
-    &.is-copied {
-      background-color: $color-accent;
-      
-      &:after { 
-        content: attr(data-tooltip-text-copied); 
-      }
+  }
+}
+
+//copy to clipboard
+input {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.copy-click {
+  position: relative;
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid $color-accent;
+  transition: background-color calc(var(--duration) * 2) var(--ease);
+
+  &:after {
+    content: attr(data-tooltip-text);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    padding: 8px 16px;
+    white-space: nowrap;
+    background-color: white;
+    color: $color-primary;
+    border-radius: 4px;
+    box-shadow: 0 0 0 -12px rgba(0, 0, 0, 0);
+    pointer-events: none;
+    backface-visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 12px);
+    transition: box-shadow calc(var(--duration) / 1.5) var(--bounce),
+      opacity calc(var(--duration) / 1.5) var(--bounce),
+      transform calc(var(--duration) / 1.5) var(--bounce);
+  }
+
+  &.is-hovered {
+    &:after {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 1;
+      transform: translate(-50%, 0);
+      transition-timing-function: var(--ease);
     }
   }
 
-  *{cursor:none;}
+  &.is-copied {
+    background-color: $color-accent;
 
-  .cursor {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: 1px solid $color-secondary;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: all 200ms ease-out;
+    &:after {
+      content: attr(data-tooltip-text-copied);
+    }
   }
-  
-  .cursor2 {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    background-color: $color-accent-pink;
-    
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: width .3s, height .3s, opacity .3s;
-  }
-  
-  
-  
-  .cursorinnerhover {
-    width: 50px;
-    height: 50px;
-    opacity: .5;
-  }
+}
+
+//cursor
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid $color-secondary;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 200ms ease-out;
+}
+
+.cursor2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: $color-accent-pink;
+
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}

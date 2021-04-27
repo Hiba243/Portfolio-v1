@@ -1,42 +1,24 @@
-.section-landing-page{
-    display: flex;
-    flex-direction: column;
-    height: 75vh;
-    justify-content: flex-end;  
-    @include respond(tab-port){
-        height: fit-content;
-    }
+.section-landing-page {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  justify-content: flex-end;
+  @include respond(tab-land) {
+    height: fit-content;
+  }
 }
 
-.heading{
-    &-main{
-        &-1{
-            display: flex;
-            gap:3rem;
-            font-size: 4rem;   
-            @include respond(tab-port){
-                font-size: 3rem;
-                gap:1rem;
-            }   
-            @include respond(phone){
-                font-size: 2.5rem;
-                gap:1rem;
-            } 
-        }
-        &-1{
-            justify-content: flex-end;
-            @include respond(tab-land){
-                justify-content: flex-start;
-            }   
-        }
-        &__text{
-            &-p1,&-p2,&-p3,&-p4{
-                animation: moveFromDown;
-                animation-delay: .1s;
-                animation-duration: 2s;
-            }
-        
-
-        }
-    }    
+.heading {
+  &-main {
+    font-size: 4rem;
+    @include respond(tab-land) {
+      font-size: 3rem;
+      margin-top: 20vh;
+    }
+    &__text {
+      animation: moveFromDown;
+      animation-delay: 0.1s;
+      animation-duration: 2s;
+    }
+  }
 }

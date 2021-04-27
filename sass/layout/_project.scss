@@ -1,79 +1,73 @@
-.section-work{
-    &__text{
-        &-h1{
-            font-size: 3rem;
-            margin: 0 0 6rem 0;
-            margin-top: 20vh;
-            @include respond(tab-port){
-                font-size: 4rem;
-                margin-bottom: 3rem;
-                -webkit-text-fill-color: $color-secondary;  
-                -webkit-text-stroke: 0px;
-            }
-        }
+.section-work {
+  &__heading__text {
+    font-size: 3rem;
+    margin: 0 0 6rem 0;
+    margin-top: 20vh;
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
     }
+  }
 }
-.project{
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  &__img {
+    background-color: $color-secondary;
+    width: 100%;
+    height: 90vh;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+  &__desc {
+    display: flex;
+    flex-direction: row;
+    &-content {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+      height: fit-content;
+      padding-left: 0;
+      margin-top: 2rem;
+      margin-left: 0;
+    }
+    &__text {
+      &-h1 {
+        font-size: 2rem;
+      }
+      &-t1 {
+        font-size: 1.65rem;
+        @include respond(tab-port) {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  &__link {
+    width: 40%;
     display: flex;
     flex-direction: column;
-    gap:3rem;
-    &__img{
-        background-color: $color-secondary;
-        width:100%;
-        height:90vh;
-        @include respond(tab-port){
-            width: 100%;
-        }
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 1.65rem;
+    @include respond(tab-port) {
+      font-size: 1.75rem;
     }
-    &__desc{
-        display: flex;
-        flex-direction: row;
-        &-content{
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-        }
-        @include respond(tab-port){
-            width:100%;
-            height: fit-content;
-            padding-left: 0;
-            margin-top: 2rem;
-            margin-left: 0;
-        }
-        &__text{
-            &-h1{
-                font-size: 2rem;
-            }
-            &-t1{
-                font-size: 1.65rem;
-                @include respond(tab-port){
-                    font-size: 1.75rem;
-                }
-            }
-        }
-    }
-    
-    &__link{
-        width:40%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        font-size: 1.65rem;
-        @include respond(tab-port){
-            font-size: 1.75rem;
-        }
-    }
-    &-p1{
-        margin-bottom: 5rem;
-        @include respond(tab-port){
-            margin-bottom: 5rem;
-        }
-    }  
-}
-hr{
+  }
+  &-p1 {
     margin-bottom: 5rem;
-    border-bottom: solid 3px $color-secondary;
-    border-top-width: 0px;
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
+  }
 }
-
+hr {
+  margin-bottom: 5rem;
+  border-bottom: solid 3px $color-secondary;
+  border-top-width: 0px;
+}

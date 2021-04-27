@@ -1,28 +1,28 @@
-
+//Cursor
 var cursor = document.querySelector('.cursor');
 var cursorinner = document.querySelector('.cursor2');
 var a = document.querySelectorAll('a');
 
-document.addEventListener('mousemove', function(e){
+document.addEventListener('mousemove', function (e) {
   var x = e.clientX;
   var y = e.clientY;
   cursor.style.left = x + "px";
   cursor.style.top = y + "px";
 });
 
-document.addEventListener('mousemove', function(e){
+document.addEventListener('mousemove', function (e) {
   var x = e.clientX;
   var y = e.clientY;
   cursorinner.style.left = x + 'px';
   cursorinner.style.top = y + 'px';
 });
 
-document.addEventListener('mousedown', function(){
+document.addEventListener('mousedown', function () {
   cursor.classList.add('click');
   cursorinner.classList.add('cursorinnerhover')
 });
 
-document.addEventListener('mouseup', function(){
+document.addEventListener('mouseup', function () {
   cursor.classList.remove('click')
   cursorinner.classList.remove('cursorinnerhover')
 });
@@ -36,34 +36,36 @@ a.forEach(item => {
   });
 })
 
+//hamburger
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const navLink = document.querySelectorAll(".nav-link");
+const navMenu = document.querySelector(".nav__menu");
+const navLink = document.querySelectorAll(".nav__link");
 
 hamburger.addEventListener("click", mobileMenu);
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
 function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    var sidebar=document.getElementsByClassName("hamburger");
-    if(sidebar[0].classList.contains('active')){
-        var bodyelem=document.getElementsByTagName('body');
-        bodyelem[0].style.position='fixed';
-    }
-    else{
-        var bodyelem=document.getElementsByTagName('body');
-        bodyelem[0].style.position='relative';
-    }
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  var sidebar = document.getElementsByClassName("hamburger");
+  if (sidebar[0].classList.contains('active')) {
+    var bodyelem = document.getElementsByTagName('body');
+    bodyelem[0].style.position = 'fixed';
+  }
+  else {
+    var bodyelem = document.getElementsByTagName('body');
+    bodyelem[0].style.position = 'relative';
+  }
 }
 
 function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    var bodyelem=document.getElementsByTagName('body');
-    bodyelem[0].style.position='relative';
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  var bodyelem = document.getElementsByTagName('body');
+  bodyelem[0].style.position = 'relative';
 }
 
+//copy to clipboard
 const links = document.querySelectorAll('.copy-click');
 const cls = {
   copied: 'is-copied',
@@ -87,7 +89,7 @@ const clickInteraction = (e) => {
   copyToClipboard(e.target);
   e.target.classList.add(cls.copied);
   setTimeout(() => e.target.classList.remove(cls.copied), 1000);
-  setTimeout(() => e.target.classList.remove(cls.hover), 700);  
+  setTimeout(() => e.target.classList.remove(cls.hover), 700);
 }
 
 Array.from(links).forEach(link => {
@@ -98,7 +100,7 @@ Array.from(links).forEach(link => {
   link.addEventListener('mouseover', e => e.target.classList.add(cls.hover));
   link.addEventListener('mouseleave', e => {
     if (!e.target.classList.contains(cls.copied)) {
-     e.target.classList.remove(cls.hover); 
+      e.target.classList.remove(cls.hover);
     }
   });
 });

@@ -1,85 +1,97 @@
-@keyframes moveInUp{
-    0%{
-        opacity: 0;
-        transform: translateY(10rem);
-    }
-    
-    100%{
-        opacity: 1;
-        transform: translate(0); /*so that it looks exactly how it is without animation*/
-    }
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(
+      0
+    ); /*so that it looks exactly how it is without animation*/
+  }
 }
-@keyframes moveInDown{
-    0%{
-        opacity: 0;
-        transform: translateY(-10rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0); /*so that it looks exactly how it is without animation*/
-    }
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(
+      0
+    ); /*so that it looks exactly how it is without animation*/
+  }
 }
 
-@keyframes moveInRight{
-    0%{
-        opacity: 0;
-        transform: translateX(-5rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0); /*so that it looks exactly how it is without animation*/
-    }
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(
+      0
+    ); /*so that it looks exactly how it is without animation*/
+  }
 }
-@keyframes moveInLeft{
-    0%{
-        opacity: 0;
-        transform: translateX(5rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0); /*so that it looks exactly how it is without animation*/
-    }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(
+      0
+    ); /*so that it looks exactly how it is without animation*/
+  }
 }
-@keyframes moveInLeftZoom{
-    0%{
-        opacity: 0;
-        transform: translateX(5rem) translateY(5rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0); /*so that it looks exactly how it is without animation*/
-    }
+@keyframes moveInLeftZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem) translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(
+      0
+    ); /*so that it looks exactly how it is without animation*/
+  }
 }
-@keyframes moveInRightZoom{
-    0%{
-        opacity: 0;
-        transform: translateX(-5rem) translateY(5rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0); /*so that it looks exactly how it is without animation*/
-    }
+@keyframes moveInRightZoom {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem) translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(
+      0
+    ); /*so that it looks exactly how it is without animation*/
+  }
 }
-@keyframes moveFromDown{
-    0%{
-        opacity: 0;
-        transform-origin: center top;
-        transform-style: preserve-3d;
-        transform: translateY(-100%) rotateX(80deg);
-        transition: opacity 0s cubic-bezier(.215,.61,.355,1),transform 0s cubic-bezier(.215,.61,.355,1);         
-    }
-    100%{
-        opacity: 1;
-
-    }
+@keyframes moveFromDown {
+  0% {
+    opacity: 0;
+    transform-origin: center top;
+    transform-style: preserve-3d;
+    transform: translateY(-100%) rotateX(80deg);
+    transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+      transform 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@keyframes lineGrow{
-    0%{
-       width: 0%;
-       border-bottom-width: 0px;     
-    }
-    100%{
-        width: 100%;
-        border-bottom-width: 100%;
-    }
+@keyframes lineGrow {
+  0% {
+    width: 0%;
+    border-bottom-width: 0px;
+  }
+  100% {
+    width: 100%;
+    border-bottom-width: 100%;
+  }
 }

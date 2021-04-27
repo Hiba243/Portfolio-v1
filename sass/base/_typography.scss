@@ -1,12 +1,11 @@
-body{
-    font-family: "Roboto", sans-serif;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: $color-secondary;
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-secondary;
 }
-h1{
-    font-family: "Roboto", sans-serif;
-    @include respond(phone){
-        font-size: 3rem !important;
-    }
+h1 {
+  @include respond(phone) {
+    font-size: 3rem !important;
+  }
 }

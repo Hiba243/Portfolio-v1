@@ -1,9 +1,9 @@
-.section-contact{
-    display: flex;
-    font-size: 4rem;
-    gap:2rem;
-    margin: 12rem 0 4rem 0;
-    @include respond(tab-port){
-        font-size: 2rem;
-    }
+.section-contact {
+  display: flex;
+  font-size: 4rem;
+  gap: 2rem;
+  margin: 12rem 0 4rem 0;
+  @include respond(tab-land) {
+    font-size: 3rem;
+  }
 }
