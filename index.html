@@ -148,13 +148,11 @@
           >
         </p>
         <div>
-          <p>LinkedIn</p>
-          <p>Github</p>
+          <p><a href="#">LinkedIn</a></p>
+          <p><a href="#">Github</a></p>
         </div>
       </section>
     </main>
-    <div class="cursor"></div>
-    <div class="cursor2"></div>
   </body>
 
   <script src="js/main.js"></script>
@@ -192,7 +190,7 @@
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           if (bottom_of_window > bottom_of_object) {
             $(this).css({
-              animation: "moveInDown 1.5s .4s",
+              animation: "moveFromDown .7s .4s",
               opacity: "1",
               "backface-visibility": "hidden",
               "animation-fill-mode": "backwards",
@@ -204,7 +202,7 @@
           var bottom_of_window = $(window).scrollTop() + $(window).height();
           if (bottom_of_window > bottom_of_object) {
             $(this).css({
-              animation: "lineGrow 1.5s .4s",
+              animation: "lineGrow 1s .4s",
               opacity: "1",
               "backface-visibility": "hidden",
               "animation-fill-mode": "backwards",
@@ -226,6 +224,9 @@
           }
         });
       });
+    });
+    $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
     });
   </script>
 </html>

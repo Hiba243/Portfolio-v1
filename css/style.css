@@ -9,7 +9,6 @@
 *::before {
   margin: 0;
   padding: 0;
-  cursor: none;
   box-sizing: inherit;
   /*to make box sizing as an inheritable property*/ }
 
@@ -54,6 +53,22 @@ a {
 a:hover {
   color: #cf1259; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
 .anm-hr {
   opacity: 0; }
 
@@ -97,31 +112,6 @@ input {
     background-color: rgba(255, 255, 255, 0.6); }
     .copy-click.is-copied:after {
       content: attr(data-tooltip-text-copied); }
-
-.cursor {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 1px solid #faf6f0;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 200ms ease-out; }
-
-.cursor2 {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: #cf1259;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width 0.3s, height 0.3s, opacity 0.3s; }
-
-.cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: 0.5; }
 
 @keyframes moveInUp {
   0% {
@@ -275,15 +265,15 @@ body {
 .nav__item {
   margin-left: 5rem; }
   .nav__item-1, .nav__item-2, .nav__item-3 {
-    animation: moveFromDown;
-    animation-delay: 0.1s;
-    animation-duration: 1.5s; }
+    animation: moveFromDown 1s .8s; }
+  .nav__item-2 {
+    animation-delay: .85s; }
+  .nav__item-3 {
+    animation-delay: .9s; }
 
 .nav__logo {
   font-size: 1.65rem;
-  animation: moveFromDown;
-  animation-delay: 0.1s;
-  animation-duration: 1.5s; }
+  animation: moveFromDown 1s .8s; }
 
 .hamburger {
   display: none; }
@@ -352,9 +342,7 @@ body {
       font-size: 3rem;
       margin-top: 20vh; } }
   .heading-main__text {
-    animation: moveFromDown;
-    animation-delay: 0.1s;
-    animation-duration: 2s; }
+    animation: moveFromDown 1s .8s; }
 
 .section-work__heading__text {
   font-size: 3rem;

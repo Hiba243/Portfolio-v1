@@ -16,9 +16,7 @@
       margin-top: 20vh;
     }
     &__text {
-      animation: moveFromDown;
-      animation-delay: 0.1s;
-      animation-duration: 2s;
+      animation: moveFromDown 1s .8s;
     }
   }
 }

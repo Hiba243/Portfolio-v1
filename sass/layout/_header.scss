@@ -20,16 +20,18 @@
     &-1,
     &-2,
     &-3 {
-      animation: moveFromDown;
-      animation-delay: 0.1s;
-      animation-duration: 1.5s;
+      animation: moveFromDown 1s .8s;
+    }
+    &-2{
+      animation-delay: .85s;
+    }
+    &-3{
+      animation-delay: .9s;
     }
   }
   &__logo {
     font-size: 1.65rem;
-    animation: moveFromDown;
-    animation-delay: 0.1s;
-    animation-duration: 1.5s;
+    animation: moveFromDown 1s .8s;
   }
 }
 
