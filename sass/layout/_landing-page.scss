@@ -3,8 +3,12 @@
   flex-direction: column;
   height: 75vh;
   justify-content: flex-end;
-  @media only screen and (max-width: 395px){
+  @media only screen and (max-width: 395px) {
     height: fit-content;
+  }
+  @include respond(phone) {
+    height: fit-content;
+    justify-content: flex-start;
   }
 }
 
@@ -14,6 +18,9 @@
     @include respond(tab-land) {
       font-size: 3rem;
       margin-top: 20vh;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
     }
     &__text {
       animation: moveFromDown 2s 0.7s;

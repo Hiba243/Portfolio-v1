@@ -14,26 +14,27 @@
   }
   &__link {
     font-size: 1.65rem;
+    padding-bottom: .4rem;
   }
   &__item {
     margin-left: 5rem;
     &-1,
     &-2,
     &-3 {
-      animation: moveFromDown 1s 1s;
+      animation: moveFromDown 1s 2.2s;
       backface-visibility: hidden;
       animation-fill-mode: backwards;
     }
     &-2 {
-      animation-delay: 1.2s;
+      animation-delay: 2.4s;
     }
     &-3 {
-      animation-delay: 1.4s;
+      animation-delay: 2.6s;
     }
   }
   &__logo {
     font-size: 1.65rem;
-    animation: moveFromDown 1s 0.8s;
+    animation: moveFromDown 1s 2s;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
   }
@@ -61,26 +62,29 @@
       top: 0;
       padding: 4rem 0;
       flex-direction: column;
-      background-color: $color-secondary;
+      background-color: $color-primary;
       width: 100%;
       height: 100vh;
       text-align: center;
       transition: 0.3s;
-      color: $color-primary;
       z-index: 100;
     }
     &__item {
       margin: 2.5rem 0;
     }
     &__link {
-      color: $color-primary;
+      color: $color-secondary;
       font-size: 3rem;
     }
     &__logo {
       font-size: 3rem;
     }
   }
-
+  .nav__logo {
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
   .nav__menu.active {
     left: 0;
     top: 0;
@@ -91,22 +95,25 @@
     display: block;
     cursor: pointer;
     z-index: 150;
+    animation: moveFromDown 1s 2s;
+    backface-visibility: hidden;
+    animation-fill-mode: backwards;
   }
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
-    background-color: $color-primary;
+    background-color: $color-secondary;
   }
 
   .hamburger.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
-    background-color: $color-primary;
+    background-color: $color-secondary;
   }
 
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
-    background-color: $color-primary;
+    background-color: $color-secondary;
   }
 }

@@ -10,6 +10,9 @@
       @include respond(tab-port) {
         margin-top: 4rem;
       }
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
   }
   &__content {
@@ -23,6 +26,9 @@
       margin-top: 0;
       margin-bottom: 0;
       font-size: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 1.65rem;
     }
     &__text {
       display: flex;

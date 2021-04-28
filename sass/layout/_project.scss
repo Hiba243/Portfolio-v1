@@ -6,6 +6,9 @@
     @include respond(tab-port) {
       margin-bottom: 3rem;
     }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 }
 .project {
@@ -38,11 +41,17 @@
     &__text {
       &-h1 {
         font-size: 2rem;
+        @include respond(phone) {
+          font-size: 1.65rem;
+        }
       }
       &-t1 {
         font-size: 1.65rem;
         @include respond(tab-port) {
           font-size: 2rem;
+        }
+        @include respond(phone) {
+          font-size: 1.65rem;
         }
       }
     }
@@ -58,6 +67,9 @@
     @include respond(tab-port) {
       font-size: 2rem;
     }
+    @include respond(phone) {
+      font-size: 1.65rem;
+    }
   }
   &-p1 {
     margin-bottom: 5rem;
@@ -68,6 +80,8 @@
 }
 hr {
   margin-bottom: 5rem;
-  border-bottom: solid 3px $color-secondary;
+  border-bottom: solid 3px $color-accent-pink;
   border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
 }
