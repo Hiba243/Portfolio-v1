@@ -14,7 +14,8 @@
 
 html {
   font-size: 62.5%;
-  /*1 rem=10px, 62.5%of root font size 16px=10px*/ }
+  /*1 rem=10px, 62.5%of root font size 16px=10px*/
+  height: 100%; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -31,7 +32,8 @@ body {
   transition: background-color 1s ease;
   color: #faf6f0;
   padding: 1rem 4rem 2rem 4rem;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  height: 100%; }
   @media only screen and (max-width: 75em) {
     body {
       padding: 3rem; } }
@@ -66,22 +68,6 @@ a.link-effect::before {
 a.link-effect:hover::before {
   visibility: visible;
   transform: scaleX(1); }
-
-/* width */
-::-webkit-scrollbar {
-  width: 12px; }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; }
 
 .anm-hr {
   opacity: 0; }
@@ -280,17 +266,17 @@ body {
 .nav__item {
   margin-left: 5rem; }
   .nav__item-1, .nav__item-2, .nav__item-3 {
-    animation: moveFromDown 1s 2.2s;
+    animation: moveFromDown 1s .5s;
     backface-visibility: hidden;
     animation-fill-mode: backwards; }
   .nav__item-2 {
-    animation-delay: 2.4s; }
+    animation-delay: .7s; }
   .nav__item-3 {
-    animation-delay: 2.6s; }
+    animation-delay: .9s; }
 
 .nav__logo {
   font-size: 1.65rem;
-  animation: moveFromDown 1s 2s;
+  animation: moveFromDown 1s .3s;
   backface-visibility: hidden;
   animation-fill-mode: backwards; }
 
@@ -340,7 +326,7 @@ body {
     display: block;
     cursor: pointer;
     z-index: 150;
-    animation: moveFromDown 1s 2s;
+    animation: moveFromDown 1s .3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards; }
   .hamburger.active .bar:nth-child(2) {
@@ -355,32 +341,94 @@ body {
     transform: translateY(-8px) rotate(-45deg);
     background-color: #faf6f0; } }
 
+.marquee-section-1 {
+  margin: 5rem 0; }
+
+@media only screen and (max-width: 75em) {
+  .parallax-text {
+    display: none; } }
+
+@media only screen and (min-width: 75em) {
+  .parallax-text {
+    position: absolute;
+    left: 10vw;
+    bottom: 50%;
+    font-size: 7rem;
+    color: #fafafa;
+    overflow: hidden; } }
+  @media only screen and (min-width: 75em) and (max-width: 75em) {
+    .parallax-text {
+      font-size: 4rem; } }
+  @media only screen and (min-width: 75em) and (max-width: 26.875em) {
+    .parallax-text {
+      font-size: 2rem; } }
+
+@media only screen and (min-width: 75em) {
+  .parallax-text::after {
+    content: attr(text);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 0.12vw #fafafa; } }
+
+.marquee {
+  overflow: hidden;
+  --offset: 20%;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset)); }
+
+.marquee__inner {
+  width: fit-content;
+  display: flex;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 30s linear infinite;
+  animation-play-state: running; }
+
+.marquee__section {
+  display: flex; }
+
+.image-container {
+  position: relative;
+  width: 40vw;
+  height: 28vw;
+  margin: 0 7vw; }
+  .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0); }
+  100% {
+    transform: translate3d(var(--move-final), 0, 0); } }
+
 .section-landing-page {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: fit-content;
   justify-content: flex-end; }
-  @media only screen and (max-width: 395px) {
-    .section-landing-page {
-      height: fit-content; } }
-  @media only screen and (max-width: 26.875em) {
-    .section-landing-page {
-      height: fit-content;
-      justify-content: flex-start; } }
 
 .heading-main {
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin-top: 10rem; }
   @media only screen and (max-width: 75em) {
     .heading-main {
-      font-size: 3rem;
-      margin-top: 20vh; } }
+      font-size: 3rem; } }
   @media only screen and (max-width: 26.875em) {
     .heading-main {
       font-size: 2rem; } }
-  .heading-main__text {
-    animation: moveFromDown 2s 0.7s;
-    backface-visibility: hidden;
-    animation-fill-mode: backwards; }
 
 .section-work__heading__text {
   font-size: 3rem;
@@ -509,7 +557,8 @@ hr {
   display: flex;
   font-size: 4rem;
   gap: 2rem;
-  margin: 12rem 0 4rem 0; }
+  margin: 12rem 0 0 0;
+  padding-bottom: 4rem; }
   @media only screen and (max-width: 75em) {
     .section-contact {
       font-size: 3rem; } }

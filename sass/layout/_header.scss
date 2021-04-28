@@ -21,20 +21,20 @@
     &-1,
     &-2,
     &-3 {
-      animation: moveFromDown 1s 2.2s;
+      animation: moveFromDown 1s .5s;
       backface-visibility: hidden;
       animation-fill-mode: backwards;
     }
     &-2 {
-      animation-delay: 2.4s;
+      animation-delay: .7s;
     }
     &-3 {
-      animation-delay: 2.6s;
+      animation-delay: .9s;
     }
   }
   &__logo {
     font-size: 1.65rem;
-    animation: moveFromDown 1s 2s;
+    animation: moveFromDown 1s .3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
   }
@@ -95,7 +95,7 @@
     display: block;
     cursor: pointer;
     z-index: 150;
-    animation: moveFromDown 1s 2s;
+    animation: moveFromDown 1s .3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
   }

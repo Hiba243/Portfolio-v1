@@ -1,31 +1,19 @@
 .section-landing-page {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: fit-content;
   justify-content: flex-end;
-  @media only screen and (max-width: 395px) {
-    height: fit-content;
-  }
-  @include respond(phone) {
-    height: fit-content;
-    justify-content: flex-start;
-  }
 }
 
 .heading {
   &-main {
     font-size: 4rem;
+    margin-top: 10rem;
     @include respond(tab-land) {
       font-size: 3rem;
-      margin-top: 20vh;
     }
     @include respond(phone) {
       font-size: 2rem;
-    }
-    &__text {
-      animation: moveFromDown 2s 0.7s;
-      backface-visibility: hidden;
-      animation-fill-mode: backwards;
     }
   }
 }
