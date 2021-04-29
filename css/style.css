@@ -421,7 +421,7 @@ body {
   justify-content: flex-end; }
 
 .heading-main {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 10rem; }
   @media only screen and (max-width: 75em) {
     .heading-main {
@@ -555,7 +555,8 @@ hr {
 
 .section-contact {
   display: flex;
-  font-size: 4rem;
+  justify-content: space-between;
+  font-size: 3rem;
   gap: 2rem;
   margin: 12rem 0 0 0;
   padding-bottom: 4rem; }
@@ -565,5 +566,20 @@ hr {
   @media only screen and (max-width: 45em) {
     .section-contact {
       font-size: 2rem; } }
+  @media only screen and (max-width: 26.875em) {
+    .section-contact {
+      font-size: 1.65rem;
+      flex-direction: column;
+      gap: 0; } }
+  .section-contact__content, .section-contact__social {
+    display: flex;
+    flex-direction: column; }
   .section-contact__social {
-    align-self: center; }
+    align-items: flex-end;
+    align-self: flex-end; }
+    @media only screen and (max-width: 26.875em) {
+      .section-contact__social {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: flex-start;
+        align-self: flex-start; } }

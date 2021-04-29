@@ -12,11 +12,11 @@ function mobileMenu() {
   var sidebar = document.getElementsByClassName("hamburger");
   if (sidebar[0].classList.contains('active')) {
     var bodyelem = document.getElementsByTagName('body');
-    bodyelem[0].style.position = 'fixed';
+    bodyelem[0].style.overflow = 'hidden';
   }
   else {
     var bodyelem = document.getElementsByTagName('body');
-    bodyelem[0].style.position = 'relative';
+    bodyelem[0].style.overflow = 'visible';
   }
 }
 
