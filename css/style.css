@@ -14,8 +14,7 @@
 
 html {
   font-size: 62.5%;
-  /*1 rem=10px, 62.5%of root font size 16px=10px*/
-  height: 100%; }
+  /*1 rem=10px, 62.5%of root font size 16px=10px*/ }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -29,11 +28,8 @@ html {
 body {
   box-sizing: border-box;
   background-color: #0c0c0c;
-  transition: background-color 1s ease;
-  color: #faf6f0;
   padding: 1rem 4rem 2rem 4rem;
-  overflow-x: hidden;
-  height: 100%; }
+  overflow-x: hidden; }
   @media only screen and (max-width: 75em) {
     body {
       padding: 3rem; } }
@@ -45,8 +41,8 @@ body {
       padding: 2rem; } }
 
 ::selection {
-  background-color: #faf6f0;
-  color: #0c0c0c; }
+  background-color: #0c0c0c;
+  color: #faf6f0; }
 
 a {
   color: #faf6f0;
@@ -60,7 +56,7 @@ a.link-effect::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #747572;
+  background-color: #faf6f0;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s; }
@@ -85,7 +81,7 @@ input {
   position: relative;
   padding-bottom: 2px;
   text-decoration: none;
-  border-bottom: 2px solid #747572;
+  border-bottom: 2px solid #faf6f0;
   transition: background-color calc(var(--duration) * 2) var(--ease); }
   .copy-click:after {
     content: attr(data-tooltip-text);
@@ -94,7 +90,7 @@ input {
     left: 50%;
     padding: 8px 16px;
     white-space: nowrap;
-    background-color: white;
+    background-color: #faf6f0;
     color: #0c0c0c;
     border-radius: 4px;
     box-shadow: 0 0 0 -12px rgba(0, 0, 0, 0);
@@ -179,14 +175,17 @@ input {
 
 @keyframes lineGrow {
   0% {
-    width: 0%;
-    border-bottom-width: 0px; }
+    width: 0%; }
   100% {
-    width: 100%;
-    border-bottom-width: 100%; } }
+    width: 100%; } }
+
+@font-face {
+  font-family: "Blatant";
+  src: url("../css/fonts/Blatant.otf") format("opentype"); }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Blatant", serif;
+  letter-spacing: 0.1rem;
   /* font-size: 16px; */
   line-height: 1.7;
   color: #faf6f0; }
@@ -299,7 +298,7 @@ body {
     top: 0;
     padding: 4rem 0;
     flex-direction: column;
-    background-color: #0c0c0c;
+    background-color: #faf6f0;
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -308,7 +307,7 @@ body {
   .nav__item {
     margin: 2.5rem 0; }
   .nav__link {
-    color: #faf6f0;
+    color: #0c0c0c;
     font-size: 3rem; }
   .nav__logo {
     font-size: 3rem; } }
@@ -331,15 +330,15 @@ body {
     animation-fill-mode: backwards; }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
-    background-color: #faf6f0; }
+    background-color: #0c0c0c; }
   .hamburger.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
-    background-color: #faf6f0; }
+    background-color: #0c0c0c; }
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
-    background-color: #faf6f0; } }
+    background-color: #0c0c0c; } }
 
 .section-landing-page {
   display: flex;
@@ -421,28 +420,28 @@ body {
       font-size: 2rem; }
       @media only screen and (max-width: 26.875em) {
         .project__desc__text-h1 {
-          font-size: 1.65rem; } }
+          font-size: 1.75rem; } }
     .project__desc__text-t1 {
-      font-size: 1.65rem; }
+      font-size: 1.75rem; }
       @media only screen and (max-width: 45em) {
         .project__desc__text-t1 {
           font-size: 2rem; } }
       @media only screen and (max-width: 26.875em) {
         .project__desc__text-t1 {
-          font-size: 1.65rem; } }
+          font-size: 1.75rem; } }
   .project__link {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    font-size: 1.65rem; }
+    font-size: 1.75rem; }
     @media only screen and (max-width: 45em) {
       .project__link {
         font-size: 2rem; } }
     @media only screen and (max-width: 26.875em) {
       .project__link {
-        font-size: 1.65rem; } }
+        font-size: 1.75rem; } }
   .project-p1 {
     margin-bottom: 5rem; }
     @media only screen and (max-width: 45em) {
@@ -451,7 +450,7 @@ body {
 
 hr {
   margin-bottom: 5rem;
-  border-bottom: solid 3px #747572;
+  border-bottom: solid 2px #faf6f0;
   border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px; }
@@ -471,7 +470,7 @@ hr {
       .section-about__heading__text {
         font-size: 2rem; } }
   .section-about__content {
-    font-size: 1.65rem;
+    font-size: 1.75rem;
     margin: 4rem 0 2rem 0;
     display: flex;
     flex-direction: row;
@@ -484,7 +483,7 @@ hr {
         font-size: 2rem; } }
     @media only screen and (max-width: 26.875em) {
       .section-about__content {
-        font-size: 1.65rem; } }
+        font-size: 1.75rem; } }
     .section-about__content__text {
       display: flex;
       flex-direction: column;
