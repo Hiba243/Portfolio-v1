@@ -1,13 +1,8 @@
-@font-face {
-  font-family: "Blatant";
-  src: url("../css/fonts/Blatant.otf") format("opentype");
-}
 body {
-  font-family: "Blatant", serif;
-  letter-spacing: 0.1rem;
+  font-family: "Roboto", serif;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: $color-primary;
+  color: $color-secondary;
 }
 h1 {
   @include respond(phone) {
