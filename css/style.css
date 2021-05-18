@@ -180,7 +180,7 @@ input {
     width: 100%; } }
 
 body {
-  font-family: "Roboto", serif;
+  font-family: "Roboto", sans-serif;
   /* font-size: 16px; */
   line-height: 1.7;
   color: #faf6f0; }
