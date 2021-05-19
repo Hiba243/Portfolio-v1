@@ -2,6 +2,9 @@
   border: 1px solid;
   border-bottom: none;
   padding: 4rem 2rem;
+  @include respond(phone) {
+    padding: 0 1rem 4rem 1rem;
+  }
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -11,6 +14,7 @@
       font-size: 3rem;
       @include respond(tab-port) {
         margin-top: 4rem;
+        margin-bottom: 4rem;
       }
       @include respond(phone) {
         font-size: 2rem;
@@ -23,6 +27,11 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    @include respond(tab-land) {
+      flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     @include respond(tab-port) {
       flex-direction: column;
       margin-top: 0;
@@ -36,7 +45,7 @@
       display: flex;
       flex-direction: column;
       width: 50%;
-      @include respond(tab-port) {
+      @include respond(tab-land) {
         width: 100%;
       }
       &-1,
@@ -52,7 +61,7 @@
   &__img {
     width: 50%;
     background-color: $color-secondary;
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 100%;
     }
   }

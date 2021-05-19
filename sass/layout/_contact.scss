@@ -5,6 +5,9 @@
   font-size: 3rem;
   gap: 2rem;
   padding: 4rem 2rem;
+  @include respond(phone) {
+    padding: 4rem 1rem;
+  }
   @include respond(tab-land) {
     font-size: 3rem;
   }
@@ -20,6 +23,11 @@
   &__social {
     display: flex;
     flex-direction: column;
+  }
+  &__content{
+    @include respond(phone) {
+      gap:2rem;
+    }
   }
   &__social {
     align-items: flex-end;
