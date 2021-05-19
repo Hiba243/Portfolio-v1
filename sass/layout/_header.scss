@@ -20,7 +20,7 @@
     color: $color-secondary;
   }
   &__item {
-    margin: 0 2rem;
+    margin: 0 2rem 0 1rem;
     &-1,
     &-2,
     &-3 {
@@ -40,6 +40,7 @@
     animation: moveFromDown 1s 0.3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
+    color:$color-yellow;
   }
 }
 
@@ -77,7 +78,8 @@
     }
     &__link {
       color: $color-secondary;
-      font-size: 3rem;
+      font-size: 7rem;
+      padding-left: 3rem;
     }
     &__logo {
       font-size: 3rem;
@@ -119,4 +121,9 @@
     transform: translateY(-8px) rotate(-45deg);
     background-color: $color-secondary;
   }
+}
+.link-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

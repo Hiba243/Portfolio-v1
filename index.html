@@ -26,15 +26,24 @@
       <nav class="navbar">
         <p class="nav__logo">Portfolio 2021</p>
         <ul class="nav__menu">
+          <div class="link-flex">
+          <div class="star" id="star-1"></div>
           <li class="nav__item nav__item-1">
-            <a href="#about" class="nav__link link-effect">About</a>
+            <a href="#about" class="nav__link link-effect nav__link-1">About</a>
           </li>
+        </div>
+        <div class="link-flex">
+          <div class="star" id="star-2"></div>
           <li class="nav__item nav__item-2">
-            <a href="#work" class="nav__link link-effect">Work</a>
+            <a href="#work" class="nav__link link-effect nav__link-2">Work</a>
           </li>
+        </div>
+        <div class="link-flex">
+          <div class="star" id="star-3"></div>
           <li class="nav__item nav__item-3">
-            <a href="#contact" class="nav__link link-effect">Contact</a>
+            <a href="#contact" class="nav__link link-effect nav__link-3">Contact</a>
           </li>
+          </div>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -72,10 +81,10 @@
         </div>
         <div class="heading-main">
           <p class="heading-main__text">
-            I’m Hiba Fatima, a web developer who builds and designs web apps and
-            websites. At the intersection of functionality and aesthetics, lorem
-            ipsum dolor sit iusto eveniet quae aperiam ipsum. Let’s make
-            something great!
+            <span class="arr-purple">&rarr;</span> I’m Hiba Fatima, a web
+            developer who builds and designs web apps and websites. At the
+            intersection of functionality and aesthetics, lorem ipsum dolor sit
+            iusto eveniet quae aperiam ipsum. Let’s make something great!
             <a
               href=""
               class="copy-click"
@@ -90,7 +99,7 @@
       <section class="section-work" id="work">
         <div class="section-work__heading">
           <p class="section-work__heading__text anm-moveDown">
-            Selected Work &rarr;
+            <span class="arr-purple">&rarr;</span> Selected Work
           </p>
         </div>
         <section class="section-work__content">
@@ -133,7 +142,7 @@
       <section class="section-about" id="about">
         <div class="section-about__heading">
           <p class="section-about__heading__text anm-moveDown">
-            About Me &rarr;
+            <span class="arr-purple">&rarr;</span> About Me
           </p>
         </div>
         <div class="section-about__content">
@@ -166,7 +175,7 @@
 
       <section class="section-contact" id="contact">
         <div class="section-contact__content">
-          <p>Looking to collaborate on a project?</p>
+          <p><span class="arr-purple">&rarr;</span> Get In Touch</p>
           <p>
             Drop me a line:
             <a
@@ -207,6 +216,30 @@
           );
         }
       });
+      $(".nav__link-1").hover(
+        function () {
+          $("#star-1").addClass("star-hover");
+        },
+        function () {
+          $("#star-1").removeClass("star-hover");
+        }
+      );
+      $(".nav__link-2").hover(
+        function () {
+          $("#star-2").addClass("star-hover");
+        },
+        function () {
+          $("#star-2").removeClass("star-hover");
+        }
+      );
+      $(".nav__link-3").hover(
+        function () {
+          $("#star-3").addClass("star-hover");
+        },
+        function () {
+          $("#star-3").removeClass("star-hover");
+        }
+      );
       $(window).scroll(function () {
         var wScroll = $(this).scrollTop();
 

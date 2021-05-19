@@ -60,7 +60,7 @@ a.link-effect::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: $color-secondary;
+  background-color: $color-yellow;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -96,7 +96,7 @@ input {
   position: relative;
   padding-bottom: 2px;
   text-decoration: none;
-  border-bottom: 2px solid $color-secondary;
+  border-bottom: 2px solid $color-yellow;
   transition: background-color calc(var(--duration) * 2) var(--ease);
 
   &:after {
@@ -154,7 +154,7 @@ input {
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: $color-grey;
+    background-color: $color-purple;
     border-radius: 20px;
   }
 }
@@ -177,4 +177,44 @@ input {
   width: 50px;
   height: 50px;
   opacity: 0.5;
+}
+
+.arr-purple{
+  color:$color-purple;
+}
+.arr-yellow{
+  color:$color-yellow;
+}
+
+//star
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.star-hover{
+animation: 2.5s rotate infinite;
+animation-timing-function: linear;
+}
+
+.star {
+width: 10px;
+height: 10px;
+background: $color-yellow;
+@include respond(tab-port){
+  width: 30px;
+  height: 30px;
+}
+}
+.star:after {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+background: $color-yellow;
+transform: rotate(45deg);
+@include respond(tab-port){
+  width: 30px;
+  height: 30px;
+}
 }
