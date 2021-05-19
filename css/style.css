@@ -28,7 +28,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: #0c0c0c;
-  padding: 1rem 4rem 2rem 4rem;
+  padding: 4rem;
   overflow-x: hidden; }
   @media only screen and (max-width: 75em) {
     body {
@@ -108,6 +108,38 @@ input {
     background-color: rgba(255, 255, 255, 0.6); }
     .copy-click.is-copied:after {
       content: attr(data-tooltip-text-copied); }
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #faf6f0 #0c0c0c; }
+
+@media only screen and (min-width: 75em) {
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px; }
+  *::-webkit-scrollbar-track {
+    background: #faf6f0; }
+  *::-webkit-scrollbar-thumb {
+    background-color: #747572;
+    border-radius: 20px; } }
+
+.cursor {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%); }
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5; }
 
 @keyframes moveInUp {
   0% {
@@ -245,7 +277,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0; }
+  padding: 2rem 1rem;
+  border: 1px solid;
+  border-bottom: none; }
 
 .nav__menu {
   display: flex;
@@ -255,23 +289,23 @@ body {
 
 .nav__link {
   font-size: 1.65rem;
-  padding-bottom: .4rem;
+  padding-bottom: 0.4rem;
   color: #faf6f0; }
 
 .nav__item {
-  margin-left: 5rem; }
+  margin: 0 2rem; }
   .nav__item-1, .nav__item-2, .nav__item-3 {
-    animation: moveFromDown 1s .5s;
+    animation: moveFromDown 1s 0.5s;
     backface-visibility: hidden;
     animation-fill-mode: backwards; }
   .nav__item-2 {
-    animation-delay: .7s; }
+    animation-delay: 0.7s; }
   .nav__item-3 {
-    animation-delay: .9s; }
+    animation-delay: 0.9s; }
 
 .nav__logo {
   font-size: 1.65rem;
-  animation: moveFromDown 1s .3s;
+  animation: moveFromDown 1s 0.3s;
   backface-visibility: hidden;
   animation-fill-mode: backwards; }
 
@@ -321,7 +355,7 @@ body {
     display: block;
     cursor: pointer;
     z-index: 150;
-    animation: moveFromDown 1s .3s;
+    animation: moveFromDown 1s 0.3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards; }
   .hamburger.active .bar:nth-child(2) {
@@ -340,7 +374,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  margin: 3rem 0; }
+  padding: 4rem 2rem;
+  border: 1px solid;
+  border-bottom: none; }
 
 @media only screen and (max-width: 68.74em) {
   .carousel-section {
@@ -376,25 +412,28 @@ body {
     .heading-main {
       font-size: 2rem; } }
 
-.section-work__heading__text {
-  font-size: 3rem;
-  margin: 0 0 6rem 0;
-  margin-top: 20vh; }
-  @media only screen and (max-width: 45em) {
-    .section-work__heading__text {
-      margin-bottom: 3rem; } }
-  @media only screen and (max-width: 26.875em) {
-    .section-work__heading__text {
-      font-size: 2rem; } }
+.section-work {
+  border: 1px solid;
+  border-bottom: none; }
+  .section-work__heading__text {
+    font-size: 3rem;
+    padding: 4rem 2rem 6rem 2rem; }
+    @media only screen and (max-width: 45em) {
+      .section-work__heading__text {
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 26.875em) {
+      .section-work__heading__text {
+        font-size: 2rem; } }
 
 .project {
   display: flex;
   flex-direction: column;
-  gap: 3rem; }
+  gap: 3rem;
+  padding: 0 2rem; }
   .project__img {
     background-color: #faf6f0;
     width: 100%;
-    height: 90vh; }
+    height: 500px; }
     @media only screen and (max-width: 45em) {
       .project__img {
         width: 100%; } }
@@ -439,10 +478,10 @@ body {
       .project__link {
         font-size: 1.75rem; } }
   .project-p1 {
-    margin-bottom: 5rem; }
+    padding-bottom: 5rem; }
     @media only screen and (max-width: 45em) {
       .project-p1 {
-        margin-bottom: 5rem; } }
+        padding-bottom: 5rem; } }
 
 hr {
   margin-bottom: 5rem;
@@ -452,13 +491,15 @@ hr {
   border-right-width: 0px; }
 
 .section-about {
+  border: 1px solid;
+  border-bottom: none;
+  padding: 4rem 2rem;
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly; }
   .section-about__heading__text {
-    font-size: 3rem;
-    margin: 8rem 0 2rem 0; }
+    font-size: 3rem; }
     @media only screen and (max-width: 45em) {
       .section-about__heading__text {
         margin-top: 4rem; } }
@@ -500,12 +541,12 @@ hr {
         width: 100%; } }
 
 .section-contact {
+  border: 1px solid;
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
   gap: 2rem;
-  margin: 12rem 0 0 0;
-  padding-bottom: 4rem; }
+  padding: 4rem 2rem; }
   @media only screen and (max-width: 75em) {
     .section-contact {
       font-size: 3rem; } }

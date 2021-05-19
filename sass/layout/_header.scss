@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
+  border: 1px solid;
+  border-bottom: none;
 }
 
 .nav {
@@ -14,28 +16,28 @@
   }
   &__link {
     font-size: 1.65rem;
-    padding-bottom: .4rem;
-    color:$color-secondary;
+    padding-bottom: 0.4rem;
+    color: $color-secondary;
   }
   &__item {
-    margin-left: 5rem;
+    margin: 0 2rem;
     &-1,
     &-2,
     &-3 {
-      animation: moveFromDown 1s .5s;
+      animation: moveFromDown 1s 0.5s;
       backface-visibility: hidden;
       animation-fill-mode: backwards;
     }
     &-2 {
-      animation-delay: .7s;
+      animation-delay: 0.7s;
     }
     &-3 {
-      animation-delay: .9s;
+      animation-delay: 0.9s;
     }
   }
   &__logo {
     font-size: 1.65rem;
-    animation: moveFromDown 1s .3s;
+    animation: moveFromDown 1s 0.3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
   }
@@ -96,7 +98,7 @@
     display: block;
     cursor: pointer;
     z-index: 150;
-    animation: moveFromDown 1s .3s;
+    animation: moveFromDown 1s 0.3s;
     backface-visibility: hidden;
     animation-fill-mode: backwards;
   }

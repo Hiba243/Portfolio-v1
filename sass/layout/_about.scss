@@ -1,4 +1,7 @@
 .section-about {
+  border: 1px solid;
+  border-bottom: none;
+  padding: 4rem 2rem;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -6,7 +9,6 @@
   &__heading {
     &__text {
       font-size: 3rem;
-      margin: 8rem 0 2rem 0;
       @include respond(tab-port) {
         margin-top: 4rem;
       }

@@ -1,10 +1,10 @@
 .section-contact {
+  border: 1px solid;
   display: flex;
   justify-content: space-between;
   font-size: 3rem;
   gap: 2rem;
-  margin: 12rem 0 0 0;
-  padding-bottom: 4rem;
+  padding: 4rem 2rem;
   @include respond(tab-land) {
     font-size: 3rem;
   }
@@ -14,18 +14,19 @@
   @include respond(phone) {
     font-size: 1.65rem;
     flex-direction: column;
-    gap:0;
+    gap: 0;
   }
-  &__content,&__social{
+  &__content,
+  &__social {
     display: flex;
     flex-direction: column;
   }
-  &__social{
+  &__social {
     align-items: flex-end;
     align-self: flex-end;
     @include respond(phone) {
       flex-direction: row;
-      gap:1rem;
+      gap: 1rem;
       align-items: flex-start;
       align-self: flex-start;
     }
