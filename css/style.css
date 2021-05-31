@@ -560,13 +560,17 @@ hr {
   padding: 4rem 2rem;
   height: fit-content;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; }
+  flex-direction: row;
+  gap: 5rem; }
   @media only screen and (max-width: 26.875em) {
     .section-about {
       padding: 0 1rem 4rem 1rem; } }
+  @media only screen and (max-width: 75em) {
+    .section-about {
+      flex-direction: column; } }
   .section-about__heading__text {
-    font-size: 3rem; }
+    font-size: 3rem;
+    margin-bottom: 4rem; }
     @media only screen and (max-width: 45em) {
       .section-about__heading__text {
         margin-top: 4rem;
@@ -575,43 +579,40 @@ hr {
       .section-about__heading__text {
         font-size: 2rem; } }
   .section-about__content {
-    font-size: 1.75rem;
-    margin: 4rem 0 2rem 0;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem; }
-    @media only screen and (max-width: 75em) {
-      .section-about__content {
-        flex-direction: column;
-        margin-top: 0;
-        margin-bottom: 0; } }
+    font-size: 1.75rem; }
     @media only screen and (max-width: 45em) {
       .section-about__content {
-        flex-direction: column;
-        margin-top: 0;
-        margin-bottom: 0;
         font-size: 2rem; } }
     @media only screen and (max-width: 26.875em) {
       .section-about__content {
         font-size: 1.75rem; } }
-    .section-about__content__text {
-      display: flex;
-      flex-direction: column;
-      width: 50%; }
-      @media only screen and (max-width: 75em) {
-        .section-about__content__text {
-          width: 100%; } }
-      .section-about__content__text-1, .section-about__content__text-2, .section-about__content__text-3 {
-        margin-bottom: 4rem; }
-        @media only screen and (max-width: 75em) {
-          .section-about__content__text-1, .section-about__content__text-2, .section-about__content__text-3 {
-            width: 100%; } }
-  .section-about__img {
-    width: 50%;
-    background-color: #faf6f0; }
+  .section-about__skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 9rem;
+    font-size: 1.75rem; }
     @media only screen and (max-width: 75em) {
-      .section-about__img {
+      .section-about__skills {
         width: 100%; } }
+    @media only screen and (max-width: 45em) {
+      .section-about__skills {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 26.875em) {
+      .section-about__skills {
+        font-size: 1.75rem; } }
+
+.ab-cont {
+  width: 50%; }
+  @media only screen and (max-width: 75em) {
+    .ab-cont {
+      width: 100%; } }
+
+.ski-cont {
+  width: 50%; }
+  @media only screen and (max-width: 75em) {
+    .ski-cont {
+      width: 100%; } }
 
 .section-contact {
   border: 1px solid;
